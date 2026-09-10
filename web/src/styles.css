@@ -1,0 +1,129 @@
+:root {
+  --bg: #f4f1ea;
+  --ink: #1c1916;
+  --muted: #6b645c;
+  --line: #d9d2c8;
+  --paper: #fffcf7;
+  --accent: #9a3412;
+  --ok: #3f6212;
+  --warn: #a16207;
+  --bad: #9f1239;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; min-height: 100%; }
+button, input, select { font: inherit; }
+
+.shell { max-width: 1180px; margin: 0 auto; padding: 1rem 1.25rem 3rem; }
+.banner {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  color: #78350f;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+h1 { font-size: 1.35rem; margin: 0; letter-spacing: -0.02em; }
+.meta { color: var(--muted); font-size: 0.85rem; }
+.row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.tabs { display: flex; gap: 0; border-bottom: 1px solid var(--line); margin: 0.5rem 0 1rem; }
+.tabs button {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  color: var(--muted);
+}
+.tabs button.on { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.paper { background: var(--paper); border: 1px solid var(--line); padding: 0.75rem; }
+table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+th, td { text-align: left; padding: 0.35rem 0.4rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.35rem;
+  border: 1px solid currentColor;
+}
+.badge.out { color: var(--bad); }
+.badge.q { color: var(--warn); }
+.spark {
+  position: relative;
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
+  height: 22px;
+  cursor: help;
+  outline: none;
+}
+.spark i {
+  display: block;
+  width: 7px;
+  background: var(--ink);
+  opacity: 0.35;
+}
+.spark i.md { opacity: 0.7; background: var(--accent); }
+.spark i.on { opacity: 1; outline: 1px solid var(--ink); }
+th.obj-col, td.obj-cell { color: var(--ink); font-weight: 700; background: #f3eee4; }
+.spark .tip {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 6px);
+  z-index: 5;
+  width: 260px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  padding: 0.45rem 0.55rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+.badge.ok { color: var(--ok); }
+.clickrow { cursor: pointer; }
+.clickrow:hover { background: #f3eee4; }
+.subh { font-size: 0.95rem; margin: 1rem 0 0.35rem; }
+.callout { font-size: 0.88rem; border-left: 3px solid var(--accent); padding: 0.4rem 0.7rem; margin: 0.5rem 0 1rem; }
+.grid2 { display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 0.75rem; }
+@media (max-width: 800px) { .grid2 { grid-template-columns: 1fr; } }
+.why { font-size: 0.8rem; color: var(--muted); margin: 0.15rem 0 0.5rem; max-width: 22rem; }
+.pair { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem; }
+.pair .arrow { color: var(--accent); font-weight: 700; }
+.muted { color: var(--muted); font-size: 0.8rem; }
+.close {
+  border-left: 3px solid var(--warn);
+  background: #fffbeb;
+  padding: 0.45rem 0.7rem;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+}
+.starter-why { font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+label.chk { font-size: 0.85rem; display: flex; gap: 0.35rem; align-items: center; }
+input[type="range"] { width: 180px; }
+.actions button {
+  background: var(--ink);
+  color: var(--paper);
+  border: 0;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+}
+.actions button.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.name { font-weight: 600; }
+.pos { color: var(--muted); font-size: 0.75rem; }

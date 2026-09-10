@@ -1,0 +1,15 @@
+# Session credentials. HAR files are login cookies — never commit them.
+*.har
+cbs_cookies.txt
+cbs_cookies
+espn_cookies.txt
+espn_cookies
+.env
+__pycache__/
+*.pyc
+node_modules/
+web/dist/
+.import_tmp/
+.venv/
+.pytest_cache/
+.cursor/

@@ -1,0 +1,1560 @@
+{
+  "league": "castrati",
+  "host": "https://castrati.football.cbssports.com",
+  "my_team": "BUSSONE",
+  "my_team_id": "12",
+  "teams": {
+    "1": "BOLDING",
+    "2": "MUCK/UZES",
+    "5": "CHEN",
+    "6": "FORBES",
+    "8": "FREEMANS",
+    "9": "PRESTON",
+    "10": "THROBBER",
+    "11": "BAUKOL",
+    "12": "BUSSONE",
+    "13": "ANN"
+  },
+  "rosters": {
+    "BOLDING": [
+      {
+        "owner": "BOLDING",
+        "player": "Dak Prescott",
+        "team": "DAL",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "1824864"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Omarion Hampton",
+        "team": "LAC",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "28908905"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Christian McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2136743"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Jadarian Price",
+        "team": "SEA",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "28875230"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Davante Adams",
+        "team": "LAR",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "1893167"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Emeka Egbuka",
+        "team": "TB",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "26696165"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Justin Jefferson",
+        "team": "MIN",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2871343"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Brock Bowers",
+        "team": "LV",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "26693971"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Jason Myers",
+        "team": "SEA",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "2169640"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Steelers",
+        "team": "PIT",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1922"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Sam Darnold",
+        "team": "SEA",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2180320"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Kaelon Black",
+        "team": "SF",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3162599"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Chuba Hubbard",
+        "team": "CAR",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2865693"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Romeo Doubs",
+        "team": "NE",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2961886"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Deebo Samuel",
+        "team": "SF",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2139735"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Dallas Goedert",
+        "team": "PHI",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2132551"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Joey Slye",
+        "team": "TEN",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "3116871"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Packers",
+        "team": "GB",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1911"
+      },
+      {
+        "owner": "BOLDING",
+        "player": "Jordyn Tyson",
+        "team": "NO",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "28900885"
+      }
+    ],
+    "MUCK/UZES": [
+      {
+        "owner": "MUCK/UZES",
+        "player": "Jalen Hurts",
+        "team": "PHI",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2240246"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Saquon Barkley",
+        "team": "PHI",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2185957"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Breece Hall",
+        "team": "NYJ",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3123469"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Javonte Williams",
+        "team": "DAL",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2961719"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Zay Flowers",
+        "team": "BAL",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3127049"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Drake London",
+        "team": "ATL",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3127902"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Tetairoa McMillan",
+        "team": "CAR",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "28877124"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Travis Kelce",
+        "team": "KC",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "1725130"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Harrison Mevis",
+        "team": "LAR",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "3162619"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Chargers",
+        "team": "LAC",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1924"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Jayden Daniels",
+        "team": "WAS",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "3123337"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Kenneth Gainwell",
+        "team": "TB",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2968948"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Bucky Irving",
+        "team": "TB",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "26693770"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Quentin Johnston",
+        "team": "LAC",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3162609"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Rashee Rice",
+        "team": "KC",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3124978"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Xavier Worthy",
+        "team": "KC",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "26730787"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "T.J. Hockenson",
+        "team": "MIN",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2251097"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Wil Lutz",
+        "team": "DEN",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "2008545"
+      },
+      {
+        "owner": "MUCK/UZES",
+        "player": "Patriots",
+        "team": "NE",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1931"
+      }
+    ],
+    "CHEN": [
+      {
+        "owner": "CHEN",
+        "player": "Brock Purdy",
+        "team": "SF",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2961306"
+      },
+      {
+        "owner": "CHEN",
+        "player": "James Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2975698"
+      },
+      {
+        "owner": "CHEN",
+        "player": "RJ Harvey",
+        "team": "DEN",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3121207"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Rhamondre Stevenson",
+        "team": "NE",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3125832"
+      },
+      {
+        "owner": "CHEN",
+        "player": "D'Andre Swift",
+        "team": "CHI",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2871710"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Parker Washington",
+        "team": "JAC",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3168820"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Jameson Williams",
+        "team": "DET",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3125968"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Trey McBride",
+        "team": "ARI",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2963385"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Cam Little",
+        "team": "JAC",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "26702477"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Broncos",
+        "team": "DEN",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1909"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Justin Herbert",
+        "team": "LAC",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2221960"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Ray Davis",
+        "team": "BUF",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3123108"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Stefon Diggs",
+        "team": "WAS",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2000038"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Alec Pierce",
+        "team": "IND",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2965664"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Jayden Reed",
+        "team": "GB",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2967762"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Rashid Shaheed",
+        "team": "SEA",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2250863"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Mark Andrews",
+        "team": "BAL",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2131121"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Chris Boswell",
+        "team": "PIT",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "1724930"
+      },
+      {
+        "owner": "CHEN",
+        "player": "Bears",
+        "team": "CHI",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1906"
+      }
+    ],
+    "FORBES": [
+      {
+        "owner": "FORBES",
+        "player": "Lamar Jackson",
+        "team": "BAL",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2181169"
+      },
+      {
+        "owner": "FORBES",
+        "player": "J.K. Dobbins",
+        "team": "DEN",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2804420"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Travis Etienne",
+        "team": "NO",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2809206"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Mike Evans",
+        "team": "SF",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "1824909"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Jaxon Smith-Njigba",
+        "team": "SEA",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3162959"
+      },
+      {
+        "owner": "FORBES",
+        "player": "De'Zhaun Stribling",
+        "team": "SF",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "26696676"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Jake Ferguson",
+        "team": "DAL",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2867159"
+      },
+      {
+        "owner": "FORBES",
+        "player": "George Kittle",
+        "team": "SF",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2818265"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Evan McPherson",
+        "team": "CIN",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "2962681"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Titans",
+        "team": "TEN",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1928"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Patrick Mahomes",
+        "team": "KC",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2142052"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Najee Harris",
+        "team": "NYG",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2741200"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Aaron Jones",
+        "team": "MIN",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2071937"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Seth McGowan",
+        "team": "IND",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3161581"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Chris Godwin",
+        "team": "TB",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2818150"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Marvin Harrison Jr.",
+        "team": "ARI",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "26701883"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Courtland Sutton",
+        "team": "DEN",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2218461"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Jake Bates",
+        "team": "DET",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "3173439"
+      },
+      {
+        "owner": "FORBES",
+        "player": "Rams",
+        "team": "LAR",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1923"
+      }
+    ],
+    "FREEMANS": [
+      {
+        "owner": "FREEMANS",
+        "player": "Jared Goff",
+        "team": "DET",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2061053"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Rico Dowdle",
+        "team": "PIT",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2252798"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Derrick Henry",
+        "team": "BAL",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2061188"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Kyren Williams",
+        "team": "LAR",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3121836"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "DK Metcalf",
+        "team": "PIT",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2260185"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "DeVonta Smith",
+        "team": "PHI",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2866975"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Christian Watson",
+        "team": "GB",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2869806"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Tucker Kraft",
+        "team": "GB",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "3133332"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Cameron Dicker",
+        "team": "LAC",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "2961997"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Lions",
+        "team": "DET",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1910"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Bo Nix",
+        "team": "DEN",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "3121193"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "MarShawn Lloyd",
+        "team": "GB",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3162514"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Brian Robinson Jr.",
+        "team": "ATL",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2741207"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Jordan Addison",
+        "team": "MIN",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3162290"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Jalen Coker",
+        "team": "CAR",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3163990"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Matthew Golden",
+        "team": "GB",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "28874927"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Chigoziem Okonkwo",
+        "team": "WAS",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2965208"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Trey Smack",
+        "team": "GB",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "28899321"
+      },
+      {
+        "owner": "FREEMANS",
+        "player": "Bills",
+        "team": "BUF",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1904"
+      }
+    ],
+    "PRESTON": [
+      {
+        "owner": "PRESTON",
+        "player": "Matthew Stafford",
+        "team": "LAR",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "1114942"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Jahmyr Gibbs",
+        "team": "DET",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3162723"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "DJ Moore",
+        "team": "BUF",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2179328"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Puka Nacua",
+        "team": "LAR",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3121687"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Rome Odunze",
+        "team": "CHI",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3162979"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Amon-Ra St. Brown",
+        "team": "DET",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2967690"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Hunter Henry",
+        "team": "NE",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2079848"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Kyle Pitts",
+        "team": "ATL",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2964514"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Brandon Aubrey",
+        "team": "DAL",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "2815718"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Eagles",
+        "team": "PHI",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1921"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Drake Maye",
+        "team": "NE",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "26695757"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Tyler Allgeier",
+        "team": "ARI",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2975590"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Jonah Coleman",
+        "team": "DEN",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "28877250"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Jacory Croskey-Merritt",
+        "team": "WAS",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3126952"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Chris Rodriguez Jr.",
+        "team": "JAC",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2964667"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Ja'Kobi Lane",
+        "team": "BAL",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "29158151"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Tre Tucker",
+        "team": "LV",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3121848"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Tyler Bass",
+        "team": "BUF",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "2188356"
+      },
+      {
+        "owner": "PRESTON",
+        "player": "Cowboys",
+        "team": "DAL",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1908"
+      }
+    ],
+    "THROBBER": [
+      {
+        "owner": "THROBBER",
+        "player": "Joe Burrow",
+        "team": "CIN",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2179798"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Chase Brown",
+        "team": "CIN",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2965160"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Bijan Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3168163"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Jonathan Taylor",
+        "team": "IND",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2866395"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Bhayshul Tuten",
+        "team": "JAC",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "26732838"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Tee Higgins",
+        "team": "CIN",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2809208"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Jaylen Waddle",
+        "team": "DEN",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2962110"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Juwan Johnson",
+        "team": "NO",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2186637"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Ka'imi Fairbairn",
+        "team": "HOU",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "1996562"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Jaguars",
+        "team": "JAC",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1913"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Baker Mayfield",
+        "team": "TB",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2080032"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Jordan Mason",
+        "team": "MIN",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2967536"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Cyrus Allen",
+        "team": "KC",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "28875899"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "KC Concepcion",
+        "team": "CLE",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "29123718"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Terry McLaurin",
+        "team": "WAS",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2139279"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Devaughn Vele",
+        "team": "NO",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3121113"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Isaiah Likely",
+        "team": "NYG",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2961906"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Chad Ryland",
+        "team": "ARI",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "2964074"
+      },
+      {
+        "owner": "THROBBER",
+        "player": "Chiefs",
+        "team": "KC",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1914"
+      }
+    ],
+    "BAUKOL": [
+      {
+        "owner": "BAUKOL",
+        "player": "Josh Allen",
+        "team": "BUF",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2181054"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Quinshon Judkins",
+        "team": "CLE",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "28878286"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Cam Skattebo",
+        "team": "NYG",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "26697012"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Nico Collins",
+        "team": "HOU",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2878193"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Chris Olave",
+        "team": "NO",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2963666"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Brian Thomas Jr.",
+        "team": "JAC",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3132164"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Sam LaPorta",
+        "team": "DET",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "3124197"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Colston Loveland",
+        "team": "CHI",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "28874696"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Eddy Pineiro",
+        "team": "SF",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "2221833"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Texans",
+        "team": "HOU",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1932"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Jaxson Dart",
+        "team": "NYG",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "26694019"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Josh Jacobs",
+        "team": "GB",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2257876"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Kyle Monangai",
+        "team": "CHI",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3177368"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Jaylen Warren",
+        "team": "PIT",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3126535"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Khalil Shakir",
+        "team": "BUF",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2969119"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Carnell Tate",
+        "team": "TEN",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "29124411"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Michael Wilson",
+        "team": "ARI",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2965181"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "Andres Borregales",
+        "team": "NE",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "26699665"
+      },
+      {
+        "owner": "BAUKOL",
+        "player": "49ers",
+        "team": "SF",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1925"
+      }
+    ],
+    "BUSSONE": [
+      {
+        "owner": "BUSSONE",
+        "player": "Trevor Lawrence",
+        "team": "JAC",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2967185"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Kenneth Walker III",
+        "team": "KC",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3121372"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Ja'Marr Chase",
+        "team": "CIN",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2966320"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "CeeDee Lamb",
+        "team": "DAL",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2865251"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Ladd McConkey",
+        "team": "LAC",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3163962"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Malik Nabers",
+        "team": "NYG",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "26697761"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Dalton Kincaid",
+        "team": "BUF",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "2982991"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Tyler Warren",
+        "team": "IND",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "3168800"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Cairo Santos",
+        "team": "CHI",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "2132690"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Seahawks",
+        "team": "SEA",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1926"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Jordan Love",
+        "team": "GB",
+        "pos": "QB",
+        "slot": "",
+        "cbs_id": "2239997"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Blake Corum",
+        "team": "LAR",
+        "pos": "RB",
+        "slot": "",
+        "cbs_id": "3169252"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "TreVeyon Henderson",
+        "team": "NE",
+        "pos": "RB",
+        "slot": "",
+        "cbs_id": "26699547"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Jeremiyah Love",
+        "team": "ARI",
+        "pos": "RB",
+        "slot": "",
+        "cbs_id": "29133405"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Woody Marks",
+        "team": "HOU",
+        "pos": "RB",
+        "slot": "",
+        "cbs_id": "3171045"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Luther Burden III",
+        "team": "CHI",
+        "pos": "WR",
+        "slot": "",
+        "cbs_id": "28874444"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Makai Lemon",
+        "team": "PHI",
+        "pos": "WR",
+        "slot": "",
+        "cbs_id": "29123772"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Will Reichard",
+        "team": "MIN",
+        "pos": "K",
+        "slot": "",
+        "cbs_id": "3121084"
+      },
+      {
+        "owner": "BUSSONE",
+        "player": "Ravens",
+        "team": "BAL",
+        "pos": "DST",
+        "slot": "",
+        "cbs_id": "1903"
+      }
+    ],
+    "ANN": [
+      {
+        "owner": "ANN",
+        "player": "Caleb Williams",
+        "team": "CHI",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "26695775"
+      },
+      {
+        "owner": "ANN",
+        "player": "De'Von Achane",
+        "team": "MIA",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "3171161"
+      },
+      {
+        "owner": "ANN",
+        "player": "Ashton Jeanty",
+        "team": "LV",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "28874008"
+      },
+      {
+        "owner": "ANN",
+        "player": "David Montgomery",
+        "team": "HOU",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2261252"
+      },
+      {
+        "owner": "ANN",
+        "player": "Tony Pollard",
+        "team": "TEN",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "2184011"
+      },
+      {
+        "owner": "ANN",
+        "player": "A.J. Brown",
+        "team": "NE",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2258303"
+      },
+      {
+        "owner": "ANN",
+        "player": "George Pickens",
+        "team": "DAL",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3123212"
+      },
+      {
+        "owner": "ANN",
+        "player": "Harold Fannin Jr.",
+        "team": "CLE",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "28900882"
+      },
+      {
+        "owner": "ANN",
+        "player": "Tyler Loop",
+        "team": "BAL",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "3174704"
+      },
+      {
+        "owner": "ANN",
+        "player": "Vikings",
+        "team": "MIN",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1916"
+      },
+      {
+        "owner": "ANN",
+        "player": "Daniel Jones",
+        "team": "IND",
+        "pos": "QB",
+        "slot": "QB",
+        "cbs_id": "2179245"
+      },
+      {
+        "owner": "ANN",
+        "player": "Jonathon Brooks",
+        "team": "CAR",
+        "pos": "RB",
+        "slot": "RB",
+        "cbs_id": "26730706"
+      },
+      {
+        "owner": "ANN",
+        "player": "Josh Downs",
+        "team": "IND",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3162970"
+      },
+      {
+        "owner": "ANN",
+        "player": "Jalen Nailor",
+        "team": "LV",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2967232"
+      },
+      {
+        "owner": "ANN",
+        "player": "Michael Pittman",
+        "team": "PIT",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "2240188"
+      },
+      {
+        "owner": "ANN",
+        "player": "Garrett Wilson",
+        "team": "NYJ",
+        "pos": "WR",
+        "slot": "WR",
+        "cbs_id": "3123864"
+      },
+      {
+        "owner": "ANN",
+        "player": "Terrance Ferguson",
+        "team": "LAR",
+        "pos": "TE",
+        "slot": "TE",
+        "cbs_id": "26701481"
+      },
+      {
+        "owner": "ANN",
+        "player": "Harrison Butker",
+        "team": "KC",
+        "pos": "K",
+        "slot": "K",
+        "cbs_id": "2078888"
+      },
+      {
+        "owner": "ANN",
+        "player": "Saints",
+        "team": "NO",
+        "pos": "DST",
+        "slot": "DST",
+        "cbs_id": "1917"
+      }
+    ]
+  }
+}
