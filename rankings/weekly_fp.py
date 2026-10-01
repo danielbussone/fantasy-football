@@ -290,59 +290,50 @@ def lookup_weekly(name: str, team: str = "", pos: str = "", index: dict | None =
     return None
 
 
-def attach_weekly(rec: dict, index: dict | None = None) -> dict:
+def attach_weekly(rec: dict, index: dict | None = None, cbs_opp: str = "") -> dict:
     row = lookup_weekly(rec.get("player") or "", rec.get("team") or "", rec.get("pos") or "", index)
     out = dict(rec)
     if not row:
         out["weekly_rank"] = None
         out["weekly_value"] = None
         out["weekly_list"] = None
-        out["weekly_opp"] = ""
+        out["weekly_opp"] = cbs_opp or ""
         out["weekly_matchup"] = ""
         out["weekly_start_sit"] = ""
         return out
     out["weekly_rank"] = row.get("rk")
     out["weekly_value"] = row.get("weekly_value")
     out["weekly_list"] = row.get("list")
-    out["weekly_opp"] = row.get("opp") or ""
+    out["weekly_opp"] = row.get("opp") or cbs_opp or ""
     out["weekly_matchup"] = row.get("matchup") or ""
     out["weekly_start_sit"] = row.get("start_sit") or ""
     out["weekly_proj_fpts"] = row.get("proj_fpts") or ""
     return out
 
 
+def weekly_usage_scale(weekly_value: float | None, weekly_weight: float) -> float:
+    """#1 on a list (value 8) → 1+w volume; last (0) → 1-w; unranked or w=0 → 1."""
+    if weekly_value is None or float(weekly_weight or 0) <= 0:
+        return 1.0
+    return max(0.0, 1.0 + float(weekly_weight) * (float(weekly_value) - 4.0) / 4.0)
+
+
 def apply_weekly_shift(player: dict, weekly_weight: float) -> dict:
-    """Shift the injury-adjusted curve toward FP weekly_value; keep P90-P10 spread.
-
-    Out/IR stay 0. weekly_weight 0 is a no-op on the numbers.
-    """
-    from lineup.start_sit import OBJECTIVES, injury_tag
-
+    """No-op. FP ranks are display-only; volume blend is not wired up."""
     p = dict(player)
     proj = dict(p.get("proj") or {})
-    if proj.get("_weekly_adj"):
-        return p
-    tag = injury_tag(p)
-    wv = p.get("weekly_value")
-    if tag in {"out", "ir", "injured", "pup"} or wv is None or float(weekly_weight or 0) <= 0:
-        proj["_weekly_adj"] = True
-        p["proj"] = proj
-        return p
-    p50 = float(proj.get("p50") or 0)
-    delta = float(weekly_weight) * (float(wv) - p50)
-    for key in (*OBJECTIVES, "mean"):
-        if proj.get(key) is not None:
-            proj[key] = round(float(proj[key]) + delta, 2)
-    proj["weekly_shift"] = round(delta, 3)
     proj["_weekly_adj"] = True
     p["proj"] = proj
     return p
 
 
-def stamp_line(meta: dict | None = None) -> str:
+def stamp_line(meta: dict | None = None, week: int | None = None) -> str:
     m = meta if meta is not None else read_meta()
     lists = m.get("lists") or []
     if not lists and not m.get("as_of"):
         return ""
     bits = "+".join(lists) if lists else "—"
+    stored = int(m.get("week") or 0)
+    if week is not None and stored and stored != int(week):
+        return f"Weekly FP week {stored} on file — not used for week {week}. Import weekly."
     return f"Weekly FP week {m.get('week') or '?'} · {bits} · as of {m.get('as_of') or '—'}"

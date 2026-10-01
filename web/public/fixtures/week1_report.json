@@ -1,0 +1,332 @@
+{
+  "mock": true,
+  "week": 1,
+  "team": "BUSSONE",
+  "mix_label": "50/50",
+  "banner": "Mock week 1 report — invented grades for layout. Not CBS actuals.",
+  "format_note": "GBFL from actual yards/counts; TD/FG distances averaged, not play-by-play. Looking ahead is locked P50 vs now after Refresh — the report does not write the prior.",
+  "went_right": [
+    {
+      "player": "Ja'Marr Chase",
+      "pos": "WR",
+      "actual": 7,
+      "p50": 3,
+      "why": "142 rec yds → 130–149 bucket = 4; 1 rec TD at mix EV."
+    },
+    {
+      "player": "Trevor Lawrence",
+      "pos": "QB",
+      "actual": 11,
+      "p50": 7,
+      "why": "268 pass + 22 ru → 250–299 bucket = 2; 3 pass TDs at mix EV."
+    },
+    {
+      "player": "Seahawks",
+      "pos": "DST",
+      "actual": 6,
+      "p50": 4.04,
+      "why": "PA 13 → 10–14 bucket = 3; 4 sacks at 0.5."
+    },
+    {
+      "player": "Tyler Warren",
+      "pos": "TE",
+      "actual": 5,
+      "p50": 2,
+      "why": "81 rec yds → 80–99 TE bucket = 3; 1 rec TD at mix EV."
+    }
+  ],
+  "went_wrong": [
+    {
+      "player": "Jordan Love",
+      "pos": "QB",
+      "actual": 1,
+      "p50": 5,
+      "why": "178 pass + 8 ru → <200 = 0 yards; 1 short pass TD at mix EV."
+    },
+    {
+      "player": "CeeDee Lamb",
+      "pos": "WR",
+      "actual": 0,
+      "p50": 2,
+      "why": "54 rec yds → <70 = 0; no TD."
+    },
+    {
+      "player": "Cairo Santos",
+      "pos": "K",
+      "actual": 1,
+      "p50": 3.5,
+      "why": "0 FG; 2 XP at 0.5."
+    },
+    {
+      "player": "Ladd McConkey",
+      "pos": "WR",
+      "actual": 0,
+      "p50": 2,
+      "why": "61 rec yds → <70 = 0; no TD."
+    }
+  ],
+  "grades": [
+    { "player": "Trevor Lawrence", "pos": "QB", "slot": "QB", "rec": true, "actual": 11, "p50": 7, "band": "boom", "delta": 4 },
+    { "player": "Jordan Love", "pos": "QB", "slot": "", "rec": false, "actual": 1, "p50": 5, "band": "bust", "delta": -4 },
+    { "player": "Kenneth Walker III", "pos": "RB", "slot": "RB", "rec": true, "actual": 1, "p50": 2, "band": "typical", "delta": -1 },
+    { "player": "Blake Corum", "pos": "RB", "slot": "", "rec": false, "actual": 4, "p50": 1, "band": "boom", "delta": 3 },
+    { "player": "Woody Marks", "pos": "RB", "slot": "", "rec": false, "actual": 2, "p50": 0, "band": "typical", "delta": 2 },
+    { "player": "Jeremiyah Love", "pos": "RB", "slot": "", "rec": false, "actual": 0, "p50": 0, "band": "typical", "delta": 0 },
+    { "player": "TreVeyon Henderson", "pos": "RB", "slot": "", "rec": false, "actual": 0, "p50": 0, "band": "typical", "delta": 0 },
+    { "player": "Ja'Marr Chase", "pos": "WR", "slot": "WR", "rec": true, "actual": 7, "p50": 3, "band": "boom", "delta": 4 },
+    { "player": "CeeDee Lamb", "pos": "WR", "slot": "WR", "rec": true, "actual": 0, "p50": 2, "band": "bust", "delta": -2 },
+    { "player": "Ladd McConkey", "pos": "WR", "slot": "WR", "rec": true, "actual": 0, "p50": 2, "band": "bust", "delta": -2 },
+    { "player": "Malik Nabers", "pos": "WR", "slot": "WR", "rec": true, "actual": 0, "p50": 0, "band": "typical", "delta": 0 },
+    { "player": "Luther Burden III", "pos": "WR", "slot": "", "rec": false, "actual": 3, "p50": 1, "band": "boom", "delta": 2 },
+    { "player": "Makai Lemon", "pos": "WR", "slot": "", "rec": false, "actual": 0, "p50": 0, "band": "typical", "delta": 0 },
+    { "player": "Tyler Warren", "pos": "TE", "slot": "TE", "rec": true, "actual": 5, "p50": 2, "band": "boom", "delta": 3 },
+    { "player": "Dalton Kincaid", "pos": "TE", "slot": "TE", "rec": true, "actual": 1, "p50": 1, "band": "typical", "delta": 0 },
+    { "player": "Cairo Santos", "pos": "K", "slot": "K", "rec": true, "actual": 1, "p50": 3.5, "band": "bust", "delta": -2.5 },
+    { "player": "Will Reichard", "pos": "K", "slot": "", "rec": false, "actual": 4, "p50": 3.5, "band": "typical", "delta": 0.5 },
+    { "player": "Seahawks", "pos": "DST", "slot": "DST", "rec": true, "actual": 6, "p50": 4.04, "band": "typical", "delta": 1.96 },
+    { "player": "Ravens", "pos": "DST", "slot": "", "rec": false, "actual": 1, "p50": 2.38, "band": "bust", "delta": -1.38 }
+  ],
+  "sit_misses": [
+    {
+      "started": "Kenneth Walker III",
+      "sat": "Blake Corum",
+      "started_actual": 1,
+      "sat_actual": 4,
+      "text": "Started Walker (1) over Corum (4). Rec had Walker in; CBS slot matched. +3 left on the bench."
+    },
+    {
+      "started": "Malik Nabers",
+      "sat": "Luther Burden III",
+      "started_actual": 0,
+      "sat_actual": 3,
+      "text": "Started Nabers (Q, 0) over Burden (3). Rec kept Nabers in the WR slot."
+    },
+    {
+      "started": "Cairo Santos",
+      "sat": "Will Reichard",
+      "started_actual": 1,
+      "sat_actual": 4,
+      "text": "Started Santos (1) over Reichard (4)."
+    }
+  ],
+  "outlook": [
+    {
+      "player": "Ja'Marr Chase",
+      "pos": "WR",
+      "locked_p50": 3,
+      "now_p50": 4,
+      "delta": 1,
+      "drivers": ["3g"],
+      "note": "targets 11 → 12 (3g now in the mix)"
+    },
+    {
+      "player": "Malik Nabers",
+      "pos": "WR",
+      "locked_p50": 0,
+      "now_p50": 0,
+      "delta": 0,
+      "drivers": ["Injury"],
+      "note": "Q → Out; snaps 0 next week"
+    },
+    {
+      "player": "Jeremiyah Love",
+      "pos": "RB",
+      "locked_p50": 0,
+      "now_p50": 2,
+      "delta": 2,
+      "drivers": ["Injury", "Depth"],
+      "note": "Q → healthy; ARI RB2 → RB1 (backup cut off)"
+    },
+    {
+      "player": "Woody Marks",
+      "pos": "RB",
+      "locked_p50": 0,
+      "now_p50": 2,
+      "delta": 2,
+      "drivers": ["Depth", "3g"],
+      "note": "HOU RB2 → RB1; 3g carries 0 → 14"
+    },
+    {
+      "player": "Kenneth Walker III",
+      "pos": "RB",
+      "locked_p50": 2,
+      "now_p50": 1,
+      "delta": -1,
+      "drivers": ["3g"],
+      "note": "carries 16 → 9 (3g now in the mix)"
+    },
+    {
+      "player": "Trevor Lawrence",
+      "pos": "QB",
+      "locked_p50": 7,
+      "now_p50": 6,
+      "delta": -1,
+      "drivers": ["ESPN"],
+      "note": "new week ESPN line (not 3g)"
+    },
+    {
+      "player": "TreVeyon Henderson",
+      "pos": "RB",
+      "locked_p50": 0,
+      "now_p50": 0,
+      "delta": 0,
+      "drivers": ["Injury"],
+      "note": "still Out; expected return 2026-09-20"
+    },
+    {
+      "player": "Luther Burden III",
+      "pos": "WR",
+      "locked_p50": 1,
+      "now_p50": 2,
+      "delta": 1,
+      "drivers": ["3g", "ESPN"],
+      "note": "targets 7 → 9; ESPN week-2 line up"
+    }
+  ],
+  "actions": [
+    {
+      "add": {
+        "player": "Kyler Murray",
+        "pos": "QB",
+        "team": "MIN",
+        "past": 55,
+        "present": 6,
+        "p10": 1,
+        "future": 96,
+        "keeper": 16.4,
+        "board_rank": "115",
+        "board_value": 82,
+        "weekly_rank": 16,
+        "weekly_list": "QB",
+        "blended": 4.618,
+        "depth_rank": 1,
+        "role_note": "MIN QB1"
+      },
+      "drop": {
+        "player": "Jordan Love",
+        "pos": "QB",
+        "team": "GB",
+        "past": 62,
+        "present": 5,
+        "p10": 1,
+        "future": 80,
+        "keeper": 18.5,
+        "board_rank": "104",
+        "board_value": 92.5,
+        "weekly_rank": 21,
+        "weekly_list": "QB",
+        "blended": 4.059,
+        "depth_rank": 1,
+        "role_note": "GB QB1"
+      },
+      "reason": "Bust this week (1 vs P50 5) and roster is at 2 QB; must drop a QB."
+    },
+    {
+      "add": {
+        "player": "Anders Carlson",
+        "pos": "K",
+        "team": "NYJ",
+        "past": 28,
+        "present": 4,
+        "p10": 1,
+        "future": 64,
+        "keeper": 16,
+        "board_rank": null,
+        "board_value": null,
+        "blended": 4,
+        "depth_rank": 1,
+        "role_note": ""
+      },
+      "drop": {
+        "player": "Cairo Santos",
+        "pos": "K",
+        "team": "CHI",
+        "past": 62,
+        "present": 3.5,
+        "p10": 1,
+        "future": 56,
+        "keeper": 0,
+        "board_rank": null,
+        "board_value": null,
+        "weekly_rank": 13,
+        "weekly_list": "K",
+        "blended": 3.5,
+        "depth_rank": 1,
+        "role_note": "CHI K1"
+      },
+      "reason": "Santos busted (1 vs P50 3.5); roster is at 2 K."
+    },
+    {
+      "add": {
+        "player": "Austin Seibert",
+        "pos": "K",
+        "team": "WAS",
+        "past": 50,
+        "present": 4,
+        "p10": 1,
+        "future": 64,
+        "keeper": 16,
+        "board_rank": null,
+        "board_value": null,
+        "blended": 4,
+        "depth_rank": 1,
+        "role_note": ""
+      },
+      "drop": {
+        "player": "Will Reichard",
+        "pos": "K",
+        "team": "MIN",
+        "past": 77,
+        "present": 3.5,
+        "p10": 1,
+        "future": 56,
+        "keeper": 0,
+        "board_rank": null,
+        "board_value": null,
+        "weekly_rank": 11,
+        "weekly_list": "K",
+        "blended": 3.5,
+        "depth_rank": 1,
+        "role_note": "MIN K1"
+      },
+      "reason": "Roster is at 2 K; must drop a K."
+    },
+    {
+      "add": {
+        "player": "Browns",
+        "pos": "DST",
+        "team": "CLE",
+        "past": null,
+        "present": 2.63,
+        "p10": 0.99,
+        "future": 42.1,
+        "keeper": 0,
+        "board_rank": null,
+        "board_value": null,
+        "weekly_rank": 21,
+        "weekly_list": "DST",
+        "blended": 2.63,
+        "depth_rank": 1,
+        "role_note": "CLE DST"
+      },
+      "drop": {
+        "player": "Ravens",
+        "pos": "DST",
+        "team": "BAL",
+        "past": null,
+        "present": 2.38,
+        "p10": 0.72,
+        "future": 38.1,
+        "keeper": 0,
+        "board_rank": null,
+        "board_value": null,
+        "weekly_rank": 9,
+        "weekly_list": "DST",
+        "blended": 2.38,
+        "depth_rank": 1,
+        "role_note": "BAL DST"
+      },
+      "reason": "Ravens busted this week; roster is at 2 DST."
+    }
+  ]
+}

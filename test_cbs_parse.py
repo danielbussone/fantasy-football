@@ -1,4 +1,11 @@
-from cbs_client import parse_depth_chart, parse_public_depth_chart, parse_stats_players, parse_team_roster
+from cbs_client import (
+    current_week_from_stats_html,
+    parse_depth_chart,
+    parse_public_depth_chart,
+    parse_standings,
+    parse_stats_players,
+    parse_team_roster,
+)
 
 
 ROSTER_HTML = """
@@ -105,6 +112,59 @@ PUBLIC_RB_HTML = """
   </td>
 </tr>
 """
+
+
+def test_current_week_from_stats_html_takes_the_mode():
+    """"... for Week N" (the designation's own week) wins over an "Expected
+    Return - Week N" mention (a different, future week) and over a lone
+    outlier — matches a real `period=tp` pull: 112 "for Week 3" vs 2
+    "for Week 6" on a real WR pool.
+    """
+    html = (
+        '<span title="Elbow: Out for Week 3 vs. Seattle. Expected Return - Week 4">'
+        '<span title="Lower Body: Questionable for Week 3 at Washington">'
+        '<span title="Back: Injured Reserve. Expected Return - Week 5">'
+        '<span title="Knee: Out for Week 6, long-term IR">'
+    )
+    assert current_week_from_stats_html(html) == 3
+
+
+def test_current_week_from_stats_html_missing_is_none():
+    assert current_week_from_stats_html("<table></table>") is None
+
+
+# Real text from a live /standings/overall pull (plain()-ed HTML).
+STANDINGS_TEXT = (
+    "Rank Team Offensive Defensive Total Dif Behind "
+    "1 BUSSONE 67.5 11.5 79.0 39.0 0.0 "
+    "2 THROBBER 52.0 7.0 59.0 25.5 20.0 "
+    "3 FORBES 53.0 5.5 58.5 38.5 20.5 "
+    "4 BOLDING 43.5 14.0 57.5 22.0 21.5 "
+    "5 FREEMANS 50.0 6.0 56.0 23.0 23.0 "
+    "6 BAUKOL 49.0 6.0 55.0 23.5 24.0 "
+    "7 MUCK/UZES 49.0 2.0 51.0 22.0 28.0 "
+    "8 CHEN 42.5 7.5 50.0 22.5 29.0 "
+    "9 PRESTON 46.5 2.5 49.0 30.5 30.0 "
+    "10 ANN 42.5 4.0 46.5 11.0 32.5"
+)
+
+
+def test_parse_standings_orders_by_rank_and_ignores_unknown_teams():
+    rows = parse_standings(STANDINGS_TEXT)
+    assert [r["team"] for r in rows] == [
+        "BUSSONE",
+        "THROBBER",
+        "FORBES",
+        "BOLDING",
+        "FREEMANS",
+        "BAUKOL",
+        "MUCK/UZES",
+        "CHEN",
+        "PRESTON",
+        "ANN",
+    ]
+    assert rows[0]["total"] == 79.0
+    assert rows[-1]["total"] == 46.5
 
 
 def test_public_depth_is_team_relative():

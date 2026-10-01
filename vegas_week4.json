@@ -1,0 +1,295 @@
+{
+  "week": 4,
+  "as_of": "2026-10-01T15:40:18Z",
+  "league_avg": 22.56,
+  "teams": {
+    "CLE": {
+      "opp": "PIT",
+      "over_under": 38.5,
+      "indoor": false,
+      "kickoff": "2026-10-02T00:15Z",
+      "temperature": 79,
+      "total": 18.0,
+      "spread": 2.5
+    },
+    "PIT": {
+      "opp": "CLE",
+      "over_under": 38.5,
+      "indoor": false,
+      "kickoff": "2026-10-02T00:15Z",
+      "temperature": 79,
+      "total": 20.5,
+      "spread": -2.5
+    },
+    "WAS": {
+      "opp": "IND",
+      "over_under": 47.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T13:30Z",
+      "temperature": null,
+      "total": 22.0,
+      "spread": 3.5
+    },
+    "IND": {
+      "opp": "WAS",
+      "over_under": 47.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T13:30Z",
+      "temperature": null,
+      "total": 25.5,
+      "spread": -3.5
+    },
+    "BUF": {
+      "opp": "NE",
+      "over_under": 48.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 66,
+      "total": 27.5,
+      "spread": -6.5
+    },
+    "NE": {
+      "opp": "BUF",
+      "over_under": 48.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 66,
+      "total": 21.0,
+      "spread": 6.5
+    },
+    "CHI": {
+      "opp": "NYJ",
+      "over_under": 43.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 66,
+      "total": 23.5,
+      "spread": -3.5
+    },
+    "NYJ": {
+      "opp": "CHI",
+      "over_under": 43.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 66,
+      "total": 20.0,
+      "spread": 3.5
+    },
+    "CIN": {
+      "opp": "JAC",
+      "over_under": 51.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 66,
+      "total": 27.0,
+      "spread": -2.5
+    },
+    "JAC": {
+      "opp": "CIN",
+      "over_under": 51.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 66,
+      "total": 24.5,
+      "spread": 2.5
+    },
+    "NYG": {
+      "opp": "ARI",
+      "over_under": 44.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 66,
+      "total": 21.0,
+      "spread": 2.5
+    },
+    "ARI": {
+      "opp": "NYG",
+      "over_under": 44.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 66,
+      "total": 23.5,
+      "spread": -2.5
+    },
+    "PHI": {
+      "opp": "LAR",
+      "over_under": 43.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 63,
+      "total": 20.25,
+      "spread": 3.0
+    },
+    "LAR": {
+      "opp": "PHI",
+      "over_under": 43.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 63,
+      "total": 23.25,
+      "spread": -3.0
+    },
+    "TB": {
+      "opp": "GB",
+      "over_under": 38.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 87,
+      "total": 17.5,
+      "spread": 3.5
+    },
+    "GB": {
+      "opp": "TB",
+      "over_under": 38.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 87,
+      "total": 21.0,
+      "spread": -3.5
+    },
+    "BAL": {
+      "opp": "TEN",
+      "over_under": 42.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 62,
+      "total": 27.0,
+      "spread": -11.5
+    },
+    "TEN": {
+      "opp": "BAL",
+      "over_under": 42.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 62,
+      "total": 15.5,
+      "spread": 11.5
+    },
+    "HOU": {
+      "opp": "DAL",
+      "over_under": 48.5,
+      "indoor": true,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 78,
+      "total": 25.75,
+      "spread": -3.0
+    },
+    "DAL": {
+      "opp": "HOU",
+      "over_under": 48.5,
+      "indoor": true,
+      "kickoff": "2026-10-04T17:00Z",
+      "temperature": 78,
+      "total": 22.75,
+      "spread": 3.0
+    },
+    "MIN": {
+      "opp": "MIA",
+      "over_under": 38.5,
+      "indoor": true,
+      "kickoff": "2026-10-04T20:05Z",
+      "temperature": 63,
+      "total": 24.5,
+      "spread": -10.5
+    },
+    "MIA": {
+      "opp": "MIN",
+      "over_under": 38.5,
+      "indoor": true,
+      "kickoff": "2026-10-04T20:05Z",
+      "temperature": 63,
+      "total": 14.0,
+      "spread": 10.5
+    },
+    "LV": {
+      "opp": "KC",
+      "over_under": 47.5,
+      "indoor": true,
+      "kickoff": "2026-10-04T20:25Z",
+      "temperature": 92,
+      "total": 21.5,
+      "spread": 4.5
+    },
+    "KC": {
+      "opp": "LV",
+      "over_under": 47.5,
+      "indoor": true,
+      "kickoff": "2026-10-04T20:25Z",
+      "temperature": 92,
+      "total": 26.0,
+      "spread": -4.5
+    },
+    "SF": {
+      "opp": "DEN",
+      "over_under": 47.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T20:25Z",
+      "temperature": 90,
+      "total": 25.25,
+      "spread": -3.0
+    },
+    "DEN": {
+      "opp": "SF",
+      "over_under": 47.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T20:25Z",
+      "temperature": 90,
+      "total": 22.25,
+      "spread": 3.0
+    },
+    "SEA": {
+      "opp": "LAC",
+      "over_under": 42.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T20:25Z",
+      "temperature": 67,
+      "total": 24.75,
+      "spread": -7.0
+    },
+    "LAC": {
+      "opp": "SEA",
+      "over_under": 42.5,
+      "indoor": false,
+      "kickoff": "2026-10-04T20:25Z",
+      "temperature": 67,
+      "total": 17.75,
+      "spread": 7.0
+    },
+    "CAR": {
+      "opp": "DET",
+      "over_under": 51.5,
+      "indoor": false,
+      "kickoff": "2026-10-05T00:20Z",
+      "temperature": 65,
+      "total": 24.0,
+      "spread": 3.5
+    },
+    "DET": {
+      "opp": "CAR",
+      "over_under": 51.5,
+      "indoor": false,
+      "kickoff": "2026-10-05T00:20Z",
+      "temperature": 65,
+      "total": 27.5,
+      "spread": -3.5
+    },
+    "NO": {
+      "opp": "ATL",
+      "over_under": 47.5,
+      "indoor": true,
+      "kickoff": "2026-10-06T00:15Z",
+      "temperature": 80,
+      "total": 25.0,
+      "spread": -2.5
+    },
+    "ATL": {
+      "opp": "NO",
+      "over_under": 47.5,
+      "indoor": true,
+      "kickoff": "2026-10-06T00:15Z",
+      "temperature": 80,
+      "total": 22.5,
+      "spread": 2.5
+    }
+  }
+}

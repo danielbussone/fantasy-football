@@ -10,12 +10,20 @@ ROSTER_CAPS = {"QB": 2, "RB": 5, "WR": 6, "TE": 2, "K": 2, "DST": 2}
 SKILL_STARTERS = 7
 FLEX_POS = {"RB", "WR", "TE"}
 OBJECTIVES = ("p10", "p25", "p50", "p75", "p90")
+# "mean" (expected points) is a separate, non-percentile objective — kept out
+# of OBJECTIVES because tiebreak_keys()'s p10..p90 walk assumes OBJECTIVES is
+# a strictly ordered percentile sequence. DEFAULT_OBJECTIVE is "mean": this
+# is a cumulative-total-points league with no head-to-head, so variance is
+# free and every ranking should maximize the average, not a percentile.
+DEFAULT_OBJECTIVE = "mean"
+ALL_OBJECTIVES = OBJECTIVES + (DEFAULT_OBJECTIVE,)
 OBJECTIVE_LABELS = {
     "p10": "floor",
     "p25": "safe bets",
     "p50": "median",
     "p75": "high upside",
     "p90": "ceiling",
+    "mean": "expected points",
 }
 
 LEGAL_SKILL_MIXES = [
@@ -27,7 +35,8 @@ LEGAL_SKILL_MIXES = [
 ]
 
 
-# Injury haircuts: floor shrinks more than the ceiling so Q/D weeks get wider bands.
+# Per-draw snap/volume factors at P10–P90 (not point multipliers).
+# Floor is cut harder than the ceiling so Q/D weeks stay wide; scoring stays GBFL.
 INJURY_WEIGHTS = {
     "out": (0.0, 0.0, 0.0, 0.0, 0.0),
     "ir": (0.0, 0.0, 0.0, 0.0, 0.0),
@@ -37,6 +46,8 @@ INJURY_WEIGHTS = {
     "questionable": (0.45, 0.60, 0.75, 0.90, 1.05),
     "probable": (0.85, 0.90, 0.95, 1.0, 1.0),
 }
+INJURY_SNAP_PCTS = (0.10, 0.25, 0.50, 0.75, 0.90)
+OUT_TAGS = frozenset({"out", "ir", "injured", "pup"})
 HEALTH_SCORE = {
     "": 3,
     "probable": 2,
@@ -70,20 +81,40 @@ def health_score(player: dict) -> int:
     return HEALTH_SCORE.get(injury_tag(player), 3)
 
 
+def injury_snap_factor(tag: str, rng) -> float:
+    """Snap/volume share for one simulated game. Inverse-CDF over INJURY_WEIGHTS."""
+    if not tag or tag not in INJURY_WEIGHTS:
+        return 1.0
+    w = INJURY_WEIGHTS[tag]
+    if tag in OUT_TAGS:
+        return 0.0
+    u = float(rng.random())
+    xs = INJURY_SNAP_PCTS
+    if u <= xs[0]:
+        return float(w[0])
+    if u >= xs[-1]:
+        return float(w[-1])
+    for i in range(1, len(xs)):
+        if u <= xs[i]:
+            t = (u - xs[i - 1]) / (xs[i] - xs[i - 1])
+            return float(w[i - 1] + t * (w[i] - w[i - 1]))
+    return float(w[-1])
+
+
 def apply_injury_proj(player: dict) -> dict:
-    """OUT → 0/0/0/0/0. Q/D haircut the floor more than the ceiling (more variance)."""
+    """OUT/IR → 0/0/0/0/0. Q/D/P volume is applied inside the Monte Carlo, not to points."""
     p = dict(player)
     proj = dict(p.get("proj") or {})
     if proj.get("_inj_adj"):
         return p
     raw = {k: proj.get(k) for k in (*OBJECTIVES, "mean")}
     tag = injury_tag(p)
-    if tag and tag in INJURY_WEIGHTS:
-        for key, w in zip(OBJECTIVES, INJURY_WEIGHTS[tag]):
+    if tag in OUT_TAGS:
+        for key in (*OBJECTIVES, "mean"):
             if proj.get(key) is not None:
-                proj[key] = round(max(0.0, float(proj[key]) * w), 2)
-        if proj.get("mean") is not None:
-            proj["mean"] = round(max(0.0, float(proj["mean"]) * INJURY_WEIGHTS[tag][2]), 2)
+                proj[key] = 0.0
+        proj["injury_adj"] = tag or "out"
+    elif tag:
         proj["injury_adj"] = tag
     proj["raw"] = raw
     proj["_inj_adj"] = True
@@ -96,18 +127,23 @@ def _pct(player: dict, key: str) -> float:
 
 
 def _metric(player: dict, objective: str) -> float:
-    key = objective if objective in OBJECTIVES else "p50"
+    key = objective if objective in OBJECTIVES or objective == "mean" else DEFAULT_OBJECTIVE
     return _pct(player, key)
 
 
 def tiebreak_keys(objective: str) -> tuple[str, ...]:
-    """When the optimized percentile ties, walk the rest of the curve.
+    """When the optimized value ties, walk the rest of the curve.
 
     Floor / safe (P10, P25): same floor → who scores *next* (P50, then P75, P90).
     That prefers Walker 0/0/1/3/5 over Corum 0/0/0/2/4 — not roster order.
     Median: P50, then floor, then upside.
     Upside / ceiling: same top tick → next-highest rungs.
+    Mean (the default): same average → prefer the one with more upside next,
+    since variance is free in this format — then fall back through the rest
+    of the band.
     """
+    if objective == "mean":
+        return ("mean", "p75", "p90", "p50", "p25", "p10")
     if objective not in OBJECTIVES:
         objective = "p50"
     i = OBJECTIVES.index(objective)
@@ -183,9 +219,9 @@ def _eligible(roster: list[dict], injured_out: bool = True) -> list[dict]:
     return out
 
 
-def optimize(roster: list[dict], objective: str = "p50", allow_injured: bool = False) -> dict[str, Any]:
-    """Max SUM of the chosen percentile across a legal active lineup."""
-    objective = objective if objective in OBJECTIVES else "p50"
+def optimize(roster: list[dict], objective: str = DEFAULT_OBJECTIVE, allow_injured: bool = False) -> dict[str, Any]:
+    """Max SUM of the chosen percentile (or the mean) across a legal active lineup."""
+    objective = objective if objective in ALL_OBJECTIVES else DEFAULT_OBJECTIVE
     roster = [apply_injury_proj(p) for p in roster]
     tagged = _eligible(roster, injured_out=not allow_injured)
     players = [p for p in tagged if not p.get("_out")]
@@ -272,7 +308,7 @@ def _assign_slots(lineup: list[dict]) -> list[dict]:
 
 def _whys(starters: list[dict], bench: list[dict], objective: str) -> list[dict]:
     notes = []
-    label = OBJECTIVE_LABELS.get(objective, "median")
+    label = OBJECTIVE_LABELS.get(objective, "expected points")
     for p in starters:
         pos = (p.get("pos") or "").upper()
         proj = p.get("proj") or {}
@@ -301,11 +337,13 @@ def _whys(starters: list[dict], bench: list[dict], objective: str) -> list[dict]
             text = "High-upside start: P75 needs a chunk play or extra yardage bucket."
         elif objective == "p90":
             text = "Ceiling start: P90 is the long-TD / long-FG tail in this scoring."
+        elif objective == "mean":
+            text = "Expected-points start: no head-to-head, no playoffs — variance is free, so this maximizes the average, not a percentile."
         tag = (p.get("proj") or {}).get("injury_adj") or injury_tag(p)
         if tag == "questionable":
-            text = "Questionable: floor/median cut, tail kept (higher variance). Healthy player wins a tie."
+            text = "Questionable: snaps/volume cut in the sim (floor more than ceiling). Points are GBFL scores, not a fraction of a healthy week."
         elif tag == "doubtful":
-            text = "Doubtful: steep haircut. Only in the pool if you override injured."
+            text = "Doubtful: steep snap/volume cut. Only in the pool if you override injured."
         elif tag in {"out", "ir", "injured"}:
             text = "Out: scored 0/0/0/0/0 this week."
         notes.append({"player": p.get("player"), "text": text, "kind": "starter", "slot": slot})
@@ -351,6 +389,23 @@ def _tiebreak_notes(starters: list[dict], bench: list[dict], objective: str) -> 
 
 def _close_calls(starters: list[dict], bench: list[dict], objective: str) -> list[dict]:
     notes = []
+    # Exactly one active QB slot but the roster caps at 2 QBs, so which one
+    # starts is a real decision every single week — always surface it, not
+    # only when the projections happen to be close.
+    qbs = sorted(
+        (p for p in starters + bench if (p.get("pos") or "").upper() == "QB" and not p.get("_out")),
+        key=lambda p: rank_tuple(p, objective),
+        reverse=True,
+    )
+    if len(qbs) >= 2:
+        a, b = qbs[0], qbs[1]
+        notes.append(
+            {
+                "player": f"{a.get('player')} vs {b.get('player')}",
+                "text": "QB call: only one active QB slot. Recheck matchup/Vegas each week, not just this sim.",
+                "kind": "close",
+            }
+        )
     tes = [p for p in starters + bench if (p.get("pos") or "").upper() == "TE"]
     if len(tes) >= 2:
         a, b = tes[0], tes[1]

@@ -1,4 +1,14 @@
-from lineup.start_sit import apply_injury_proj, can_fill_active, optimize, rank_tuple, skill_counts_legal, sort_bench
+from lineup.start_sit import (
+    DEFAULT_OBJECTIVE,
+    _metric,
+    apply_injury_proj,
+    can_fill_active,
+    optimize,
+    rank_tuple,
+    skill_counts_legal,
+    sort_bench,
+    tiebreak_keys,
+)
 
 
 def _p(name, pos, p50, p10=None, p90=None, **kw):
@@ -165,6 +175,24 @@ def test_close_call_note_present():
     assert close
 
 
+def test_qb_close_call_always_shown_even_when_not_close():
+    """Only one active QB slot, roster caps at 2 QBs: which one starts is a
+    real weekly decision regardless of how far apart their projections are —
+    unlike the flex/TE close calls, this must show up every week."""
+    roster = _roster(**{"QB-A": _p("QB-A", "QB", 20), "QB-B": _p("QB-B", "QB", 2)})
+    out = optimize(roster, "mean")
+    qb_calls = [w for w in out["why"] if w.get("kind") == "close" and "QB-A" in w["player"] and "QB-B" in w["player"]]
+    assert qb_calls
+    assert "QB" in qb_calls[0]["text"]
+
+
+def test_no_qb_close_call_with_only_one_healthy_qb():
+    roster = _roster(**{"QB-B": {**_p("QB-B", "QB", 2), "injury": {"designation": "Out", "out": True}}})
+    out = optimize(roster, "mean")
+    qb_calls = [w for w in out["why"] if w.get("kind") == "close" and " vs " in w["player"] and w["player"].split(" vs ")[0].startswith("QB")]
+    assert not qb_calls
+
+
 def test_floor_tie_prefers_next_percentile_not_roster_order():
     """Corum 0/0/0/2/4 must not beat Walker 0/0/1/3/5 on P10/P25."""
 
@@ -195,6 +223,55 @@ def test_floor_tie_prefers_next_percentile_not_roster_order():
         assert "Blake Corum" not in names, obj
         why = " ".join(w["text"] for w in optimize(roster, obj)["why"] if w.get("kind") == "tiebreak")
         assert "P50" in why
+
+
+def test_default_objective_is_mean():
+    """Cumulative total-points league, no head-to-head: variance is free, so
+    every default ranking should target the average, not a percentile."""
+    assert DEFAULT_OBJECTIVE == "mean"
+    assert optimize(_roster())["objective"] == "mean"
+
+
+def test_mean_tiebreak_walks_upside_first():
+    assert tiebreak_keys("mean") == ("mean", "p75", "p90", "p50", "p25", "p10")
+
+
+def test_metric_reads_mean_not_p50():
+    p = {"proj": {"p10": 0, "p25": 1, "p50": 2, "p75": 3, "p90": 4, "mean": 2.6}}
+    assert _metric(p, "mean") == 2.6
+    assert _metric(p, "p50") == 2
+
+
+def test_mean_objective_starts_higher_average_over_higher_median():
+    """A high-floor/low-ceiling RB can have the better P50 while a spikier
+    one has the better average — mean must start the higher-average player
+    for the contested 2nd RB slot, not the higher-P50 one (which would just
+    be P50 again under a new name). Same 3-RB/4-WR/1-TE shape as the floor
+    tiebreak test above, which forces exactly 2 of the 3 RBs to start.
+    """
+
+    def rb(name, p10, p25, p50, p75, p90, mean):
+        return {"player": name, "pos": "RB", "proj": {"p10": p10, "p25": p25, "p50": p50, "p75": p75, "p90": p90, "mean": mean}}
+
+    roster = [
+        _p("QB-A", "QB", 5, p10=4),
+        rb("Lead Back", 2, 3, 6, 8, 10, 6.5),
+        rb("Steady Eddie", 3, 4, 5, 6, 7, 5.0),
+        rb("Boom Bust", 0, 0, 4, 9, 14, 6.2),
+        _p("WR-A", "WR", 9, p10=4),
+        _p("WR-B", "WR", 8, p10=3),
+        _p("WR-C", "WR", 7, p10=3),
+        # Worth more than any 3rd RB under either objective, so the mix
+        # search always keeps exactly 2 RBs — the only question is which 2.
+        _p("WR-D", "WR", 6.8, p10=2),
+        _p("TE-A", "TE", 4, p10=2),
+        _p("K-A", "K", 3, p10=2),
+        _p("DST-A", "DST", 2, p10=1),
+    ]
+    mean_starters = [p["player"] for p in optimize(roster, "mean")["starters"] if p["pos"] == "RB"]
+    p50_starters = [p["player"] for p in optimize(roster, "p50")["starters"] if p["pos"] == "RB"]
+    assert "Boom Bust" in mean_starters and "Steady Eddie" not in mean_starters
+    assert "Steady Eddie" in p50_starters and "Boom Bust" not in p50_starters
 
 
 def test_can_fill_active_rejects_short_skill():
@@ -229,11 +306,13 @@ def test_out_projection_is_zero():
     assert adj["injury_adj"] == "out"
 
 
-def test_questionable_haircut_and_healthy_tiebreak():
+def test_questionable_does_not_scale_scored_points():
+    """Q/D volume is applied in the Monte Carlo, not as 0.75 × already-scored P50."""
     q = apply_injury_proj(_p("Q", "WR", 8, p10=4, p90=16, injury={"designation": "Questionable"}))
-    assert q["proj"]["p50"] == 6.0  # 8 * 0.75
-    assert q["proj"]["p10"] == 1.8  # 4 * 0.45
-    assert q["proj"]["p90"] == 16.8  # 16 * 1.05
+    assert q["proj"]["p50"] == 8
+    assert q["proj"]["p10"] == 4
+    assert q["proj"]["p90"] == 16
+    assert q["proj"]["injury_adj"] == "questionable"
     h = _p("H", "WR", 3)
     q2 = _p("Q2", "WR", 3, injury={"designation": "Questionable"})
     h["proj"]["_inj_adj"] = True

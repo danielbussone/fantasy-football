@@ -9,6 +9,7 @@ from rankings.weekly_fp import (
     lookup_weekly,
     merge_weekly,
     parse_fp_csv,
+    weekly_usage_scale,
     weekly_value,
     write_weekly,
 )
@@ -89,7 +90,15 @@ def test_partial_reimport_keeps_other_lists(tmp_path):
     assert not any(r["player"] == "A" for r in merged)
 
 
-def test_weekly_shift_keeps_spread_and_zero_weight_is_noop():
+def test_weekly_usage_scale_from_rank():
+    assert weekly_usage_scale(None, 0.2) == 1.0
+    assert weekly_usage_scale(8, 0) == 1.0
+    assert weekly_usage_scale(8, 0.2) == 1.2
+    assert weekly_usage_scale(0, 0.2) == 0.8
+    assert weekly_usage_scale(4, 0.2) == 1.0
+
+
+def test_weekly_shift_does_not_fractionalize_points():
     rec = {
         "player": "X",
         "pos": "RB",
@@ -99,8 +108,26 @@ def test_weekly_shift_keeps_spread_and_zero_weight_is_noop():
     z = apply_weekly_shift(dict(rec), 0)["proj"]
     assert (z["p10"], z["p50"], z["p90"]) == (1, 3, 5)
     s = apply_weekly_shift(dict(rec), 0.2)["proj"]
-    assert s["p90"] - s["p10"] == 4
-    assert s["p50"] == round(3 + 0.2 * (8 - 3), 2)
+    assert (s["p10"], s["p50"], s["p90"]) == (1, 3, 5)
+
+
+def test_fp_volume_moves_sim():
+    from projections.weekly import blend_weekly_volume, project_player
+
+    prior = {
+        "player": "X",
+        "pos": "WR",
+        "scrim_ypg": 80,
+        "rec_share": 0.95,
+        "rec_td_rate": 0.4,
+        "cv": 0.3,
+        "ypc": 12,
+    }
+    hi = project_player(blend_weekly_volume(prior, 8, 0.5), n=500, seed=2)
+    lo = project_player(blend_weekly_volume(prior, 0, 0.5), n=500, seed=2)
+    h_yds = (hi["sim"].get("rec_yds") or 0) + (hi["sim"].get("rush_yds") or 0)
+    l_yds = (lo["sim"].get("rec_yds") or 0) + (lo["sim"].get("rush_yds") or 0)
+    assert h_yds > l_yds
 
 
 def test_out_stays_zero_after_shift():
@@ -118,26 +145,22 @@ def test_out_stays_zero_after_shift():
 
 
 def test_start_sit_can_flip_when_fp_disagrees():
-    def wr(name, weekly):
-        return apply_weekly_shift(
-            {
-                "player": name,
-                "pos": "WR",
-                "weekly_value": weekly,
-                "proj": {"p10": 4, "p25": 4.5, "p50": 5, "p75": 6, "p90": 7, "mean": 5},
-            },
-            0.5,
-        )
+    def wr(name, p50):
+        return {
+            "player": name,
+            "pos": "WR",
+            "proj": {"p10": p50 - 1, "p25": p50 - 0.5, "p50": p50, "p75": p50 + 1, "p90": p50 + 2, "mean": p50},
+        }
 
     def filler(name, pos, p50):
         return {
             "player": name,
             "pos": pos,
-            "proj": {"p10": p50 - 1, "p25": p50 - 0.5, "p50": p50, "p75": p50 + 1, "p90": p50 + 2, "mean": p50, "_weekly_adj": True},
+            "proj": {"p10": p50 - 1, "p25": p50 - 0.5, "p50": p50, "p75": p50 + 1, "p90": p50 + 2, "mean": p50},
         }
 
-    boom = wr("Low-FP", 1)
-    quiet = wr("High-FP", 8)
+    boom = wr("Low-FP", 4)
+    quiet = wr("High-FP", 6)
     roster = [
         filler("QB-A", "QB", 5),
         filler("RB-A", "RB", 6),

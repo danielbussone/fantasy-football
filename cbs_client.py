@@ -8,11 +8,12 @@ See cbs_api.md for the endpoint map. Stats endpoints return HTML tables
 """
 from __future__ import annotations
 
+import gzip
 import json
 import os
 import re
 import ssl
-import gzip
+from collections import Counter
 from html import unescape
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -47,6 +48,7 @@ ALIAS = {
     "kenneth gainwell": "kenny gainwell",
     "devon achane": "de'von achane",
     "d'von achane": "de'von achane",
+    "andres borregales": "andy borregales",  # CBS uses his full name, nflverse "Andy"
 }
 
 _CTX = ssl.create_default_context()
@@ -204,6 +206,9 @@ class CBSClient:
     def depth_chart(self) -> str:
         return self.get("/players/depth-chart")
 
+    def standings_page(self) -> str:
+        return self.get("/standings/overall")
+
 
 def _looks_like_login(text: str, final_url: str) -> bool:
     u = (final_url or "").lower()
@@ -214,6 +219,30 @@ def _looks_like_login(text: str, final_url: str) -> bool:
     if re.search(r"sign in|log in|enter your password", text, re.I):
         return True
     return False
+
+
+_FOR_WEEK = re.compile(r"for Week (\d+)", re.I)
+
+
+def current_week_from_stats_html(html: str) -> int | None:
+    """CBS's own idea of "this week", read off its `period=tp` ("this period")
+    stats response — no NFL calendar math, no season-start date to maintain.
+
+    That response's injury tooltips are CBS's own copy, e.g. "Questionable
+    for Week 3 at Washington" or "Out for Week 3, set for more tests" —
+    always phrased as "... for Week N" for the week the designation applies
+    to (an "Expected Return - Week N" phrase for a different, future week
+    does not match "for Week", so it's not counted). Across a full position
+    pool this is a very lopsided, redundant signal — on a real pull, 112
+    "for Week 3" mentions vs 2 stray "for Week 6" (a long-term IR note) —
+    so the most common week number wins. Returns None if the pool has no
+    injury tooltips to read (e.g. a bye week with nobody hurt, or CBS
+    returned a page this doesn't recognize) — callers should fall back.
+    """
+    counts = Counter(int(n) for n in _FOR_WEEK.findall(html))
+    if not counts:
+        return None
+    return counts.most_common(1)[0][0]
 
 
 def parse_stats_players(html: str) -> list[dict]:
@@ -321,6 +350,28 @@ def _parse_player_row(row: str, headers: list[str]) -> dict | None:
             seen[h] = n
             rec[h if n == 1 else f"{h}_{n}"] = v
     return rec
+
+
+def parse_standings(html: str) -> list[dict]:
+    """Parse /standings/overall into rank-ordered team totals.
+
+    This is a cumulative-total-points league (no head-to-head, no
+    playoffs) — the standings ARE just each team's season GBFL total, and
+    reverse standings order is exactly Tuesday's waiver priority.
+    Confirmed live: "1 BUSSONE 67.5 11.5 79.0 39.0 0.0  2 THROBBER 52.0
+    7.0 59.0 25.5 20.0  ..." (rank, team, offensive, defensive, total,
+    dif, behind).
+    """
+    text = plain(html)
+    known = set(TEAM_IDS.values())
+    rows: list[dict] = []
+    for m in re.finditer(r"(\d+)\s+([A-Z0-9/]+)\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)", text):
+        rank, team, off, deff, total, _dif, _behind = m.groups()
+        if team not in known:
+            continue
+        rows.append({"rank": int(rank), "team": team, "offensive": float(off), "defensive": float(deff), "total": float(total)})
+    rows.sort(key=lambda r: r["rank"])
+    return rows
 
 
 def parse_depth_chart(html: str) -> list[dict]:

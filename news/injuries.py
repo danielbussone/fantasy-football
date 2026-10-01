@@ -215,13 +215,23 @@ def from_cbs_slots(roster: list[dict]) -> dict[str, dict]:
     return notes
 
 
-_ESPN_CACHE: dict = {"t": 0.0, "injuries": {}, "roster_notes": {}}
+_ESPN_CACHE: dict = {"t": 0.0, "last_try": 0.0, "injuries": {}, "roster_notes": {}}
 
 
 def cached_espn_feed(ttl: float = 600) -> tuple[dict[str, dict], dict[str, dict]]:
+    """Throttle to one ESPN fetch per `ttl`, including when ESPN is down.
+
+    Gating the retry on `last_try` (not just a successful `t`) matters when
+    the feed is empty/unreachable: without it, an ESPN outage means every
+    request re-tries the network call (with its own timeout) instead of
+    reusing the last-known (possibly empty) result for the TTL window.
+    """
     now = time.time()
     if _ESPN_CACHE["injuries"] and now - _ESPN_CACHE["t"] < ttl:
         return _ESPN_CACHE["injuries"], _ESPN_CACHE["roster_notes"]
+    if now - _ESPN_CACHE["last_try"] < ttl:
+        return _ESPN_CACHE["injuries"] or {}, _ESPN_CACHE["roster_notes"] or {}
+    _ESPN_CACHE["last_try"] = now
     injuries, roster_notes = fetch_espn_player_items()
     if injuries or roster_notes:
         _ESPN_CACHE["t"] = now

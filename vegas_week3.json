@@ -1,0 +1,295 @@
+{
+  "week": 3,
+  "as_of": "2026-09-28T22:08:32Z",
+  "league_avg": 21.25,
+  "teams": {
+    "CHI": {
+      "opp": "PHI",
+      "over_under": 42.5,
+      "indoor": false,
+      "kickoff": "2026-09-29T00:15Z",
+      "temperature": 64,
+      "total": 19.5,
+      "spread": 3.5
+    },
+    "PHI": {
+      "opp": "CHI",
+      "over_under": 42.5,
+      "indoor": false,
+      "kickoff": "2026-09-29T00:15Z",
+      "temperature": 64,
+      "total": 23.0,
+      "spread": -3.5
+    },
+    "GB": {
+      "opp": "ATL",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-25T00:15Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "ATL": {
+      "opp": "GB",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-25T00:15Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "BUF": {
+      "opp": "LAC",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "LAC": {
+      "opp": "BUF",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "CLE": {
+      "opp": "CAR",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "CAR": {
+      "opp": "CLE",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "DET": {
+      "opp": "NYJ",
+      "over_under": null,
+      "indoor": true,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "NYJ": {
+      "opp": "DET",
+      "over_under": null,
+      "indoor": true,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "IND": {
+      "opp": "HOU",
+      "over_under": null,
+      "indoor": true,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "HOU": {
+      "opp": "IND",
+      "over_under": null,
+      "indoor": true,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "MIA": {
+      "opp": "KC",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "KC": {
+      "opp": "MIA",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "NYG": {
+      "opp": "TEN",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "TEN": {
+      "opp": "NYG",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "PIT": {
+      "opp": "CIN",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "CIN": {
+      "opp": "PIT",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "WAS": {
+      "opp": "SEA",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "SEA": {
+      "opp": "WAS",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "JAC": {
+      "opp": "NE",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "NE": {
+      "opp": "JAC",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T17:00Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "SF": {
+      "opp": "ARI",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T20:05Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "ARI": {
+      "opp": "SF",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T20:05Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "TB": {
+      "opp": "MIN",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T20:05Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "MIN": {
+      "opp": "TB",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T20:05Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "DAL": {
+      "opp": "BAL",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T20:25Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "BAL": {
+      "opp": "DAL",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-27T20:25Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "NO": {
+      "opp": "LV",
+      "over_under": null,
+      "indoor": true,
+      "kickoff": "2026-09-27T20:25Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "LV": {
+      "opp": "NO",
+      "over_under": null,
+      "indoor": true,
+      "kickoff": "2026-09-27T20:25Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "DEN": {
+      "opp": "LAR",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-28T00:20Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    },
+    "LAR": {
+      "opp": "DEN",
+      "over_under": null,
+      "indoor": false,
+      "kickoff": "2026-09-28T00:20Z",
+      "temperature": null,
+      "total": null,
+      "spread": null
+    }
+  }
+}

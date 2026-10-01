@@ -54,7 +54,7 @@ Returns an HTML `<table class="data">`.
 
 - **pool:** `all` (every player, Avail = owner or waivers), `fa` (current free agents / waivers), `team` (your team), `team:{id}` (one roster), `team:all`
 - **positions:** `QB`, `RB`, `WR`, `TE`, `K`, `DST`, or combinations `QB:RB:WR:TE`
-- **period:** `ytd`, `week1` (or `1`), `restofseason`, `season` (preseason proj), `2025`, `2024`, `3yr`, `3g`, `tp`, `ws`
+- **period:** `ytd`, `week1` (or `1`), `restofseason`, `season` (preseason proj), `2025`, `2024`, `3yr`, `3g`, `tp`, `ws`. **Week box scores:** use `1`, `2`, … (`tp` = this week). `week1` returns the player list with **empty** stat columns — do not use it for actuals.
 - **cats:** `standard` (NFL stat categories — use this), `scoring` (site fantasy points; **not** this league’s engine)
 - **kind:** `stats` or `projections` (CBS projections are a last-resort weak signal only)
 

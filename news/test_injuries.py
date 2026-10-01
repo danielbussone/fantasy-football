@@ -76,8 +76,9 @@ def test_refresh_does_not_wipe_existing(monkeypatch, tmp_path):
         '{"as_of":"x","notes":{"treveyon henderson":{"player":"TreVeyon Henderson","designation":"Out","out":true}}}',
         encoding="utf-8",
     )
-    monkeypatch.setattr(inj, "fetch_espn_injury_report", lambda: {})
-    monkeypatch.setattr(inj, "fetch_espn_blurbs", lambda: [])
+    # refresh() calls the combined fetch_espn_player_items(), not the two
+    # split helpers below it — mock that one.
+    monkeypatch.setattr(inj, "fetch_espn_player_items", lambda: ({}, {}))
     out = inj.refresh([{"player": "Ja'Marr Chase", "slot": "WR"}])
     assert out["notes"]["treveyon henderson"]["designation"] == "Out"
 

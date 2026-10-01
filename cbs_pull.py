@@ -19,6 +19,7 @@ import csv
 import json
 import sys
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 from cbs_client import (
@@ -28,8 +29,10 @@ from cbs_client import (
     TEAM_IDS,
     AuthError,
     CBSClient,
+    current_week_from_stats_html,
     load_cookie_header,
     norm,
+    parse_standings,
     parse_stats_players,
     parse_team_roster,
     parse_depth_chart,
@@ -43,7 +46,120 @@ ROSTER_JSON = ROOT / "roster.json"
 DRAFTED_CSV = ROOT / "drafted.csv"
 STATS_3G = ROOT / "cbs_stats_3g.csv"
 DEPTH_CSV = ROOT / "cbs_depth.csv"
+CURRENT_WEEK_JSON = ROOT / "current_week.json"
+CBS_PULL_META = ROOT / "cbs_pull_meta.json"
+STANDINGS_JSON = ROOT / "standings.json"
 UNRANKED_POS = {"K", "DST"}
+
+
+def detect_current_week(client: CBSClient) -> int | None:
+    """Ask CBS which week it thinks is current (see current_week_from_stats_html)."""
+    try:
+        html = client.stats_report("all", "QB", period="tp", kind="stats")
+    except (AuthError, ConnectionError, TimeoutError, OSError):
+        return None
+    return current_week_from_stats_html(html)
+
+
+def read_current_week() -> dict:
+    if not CURRENT_WEEK_JSON.exists():
+        return {"week": None, "source": "", "as_of": ""}
+    try:
+        return json.loads(CURRENT_WEEK_JSON.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"week": None, "source": "", "as_of": ""}
+
+
+def write_current_week(week: int, source: str, when: str | None = None) -> dict:
+    payload = {
+        "week": int(week),
+        "source": source,
+        "as_of": when or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    }
+    CURRENT_WEEK_JSON.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def write_cbs_pull_meta(week: int, when: str | None = None) -> dict:
+    payload = {
+        "week": int(week),
+        "as_of": when or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    }
+    CBS_PULL_META.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def read_cbs_pull_meta() -> dict:
+    if not CBS_PULL_META.exists():
+        return {"week": None, "as_of": ""}
+    try:
+        return json.loads(CBS_PULL_META.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"week": None, "as_of": ""}
+
+
+def write_standings(rows: list[dict], when: str | None = None) -> dict:
+    payload = {
+        "as_of": when or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "teams": rows,
+    }
+    STANDINGS_JSON.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def read_standings() -> dict:
+    if not STANDINGS_JSON.exists():
+        return {"as_of": "", "teams": []}
+    try:
+        return json.loads(STANDINGS_JSON.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"as_of": "", "teams": []}
+
+
+def waiver_priority_map(standings: dict | None = None) -> dict[str, int]:
+    """{owner: waiver priority}, 1 = claims first. This is a total-points
+    league with no head-to-head, so "standings" is just each team's season
+    GBFL total — Tuesday's waiver order is the reverse of it: the worst
+    record claims first, the leader claims last.
+    """
+    standings = standings if standings is not None else read_standings()
+    teams = standings.get("teams") or []
+    n = len(teams)
+    if not n:
+        return {}
+    by_rank = sorted(teams, key=lambda r: r.get("rank") or 0)
+    return {r["team"]: n - i for i, r in enumerate(by_rank)}
+
+
+def week_stats_csv(week: int) -> Path:
+    return ROOT / f"cbs_stats_week{int(week)}.csv"
+
+
+def format_cbs_opp(raw: str | None) -> str:
+    s = (raw or "").strip()
+    if not s or s in {"-", "N/R", "—"}:
+        return ""
+    if s.startswith("@"):
+        return f"at {s[1:]}"
+    return f"vs. {s}"
+
+
+def load_cbs_opps(week: int) -> dict[str, str]:
+    """Scheduled Opp for this NFL week from cbs_stats_weekN.csv (even if boxes are empty)."""
+    path = week_stats_csv(week)
+    if not path.exists():
+        return {}
+    out: dict[str, str] = {}
+    for r in csv.DictReader(path.open(encoding="utf-8")):
+        name = r.get("player") or ""
+        label = format_cbs_opp(r.get("Opp"))
+        if not name or not label:
+            continue
+        out[norm(name)] = label
+        team = (r.get("team") or "").upper()
+        if team:
+            out.setdefault(f"team:{team}", label)
+    return out
 
 
 def log(msg: str) -> None:
@@ -139,16 +255,41 @@ def pull_pool(client: CBSClient, pool: str, period: str) -> list[dict]:
     return out
 
 
-def _num(row: dict, *keys) -> float:
-    for k in keys:
-        v = row.get(k)
-        if v in (None, "", "-", "N/R", "—"):
-            continue
-        try:
-            return float(str(v).replace(",", ""))
-        except ValueError:
-            continue
-    return 0.0
+def week_stat_periods(week: int) -> list[str]:
+    """CBS week-N box scores and *this week's* Opp live at period=N (`2`).
+
+    Do not fall through to `tp` / `ytd` — those stay on the last played week
+    (`@MIN`, filled boxes) after kickoff, so week-2 actuals and opps would lie.
+    `weekN` is names + scheduled Opp with empty stat columns.
+    """
+    n = int(week)
+    return [str(n), f"week{n}"]
+
+
+def pull_week_stats(client: CBSClient, week: int) -> list[dict]:
+    from scoring.actuals import row_has_box_stats
+
+    last: list[dict] = []
+    for period in week_stat_periods(week):
+        log(f"  week-{week} stats period={period} ...")
+        rows = pull_pool(client, "all", period)
+        last = rows
+        nz = sum(1 for r in rows if row_has_box_stats(r))
+        log(f"    {len(rows)} rows, {nz} with box-score stats")
+        if nz >= 5:
+            return rows
+        log(f"    {period} looks empty; trying next period")
+    return last
+
+
+def write_pool_csv(path: Path, rows: list[dict]) -> None:
+    fields = ["player", "team", "pos", "cbs_id"]
+    extra: list[str] = []
+    for r in rows:
+        for k in r:
+            if k not in fields and k not in extra and k not in {"owner", "slot", "key", "status"}:
+                extra.append(k)
+    write_csv(path, rows, fields + extra)
 
 
 def load_history() -> dict:
@@ -312,14 +453,20 @@ def print_bussone(roster: list[dict]) -> None:
         log(f"  {slot:8} {r['player']:22} {r.get('pos') or '':3} {r.get('team') or ''}")
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser(description="Pull CBS GBFL roster and free agents")
     ap.add_argument("--har", help="Firefox/Chrome HAR export (contains session cookies)")
     ap.add_argument("--cookies", help="gitignored cookie file (Cookie header or name=value lines)")
     ap.add_argument("--period", default="2025", help="stats period (default 2025; ytd is empty in week 1)")
-    args = ap.parse_args()
+    ap.add_argument(
+        "--week",
+        type=int,
+        default=None,
+        help="NFL week for box-score stats (cbs_stats_weekN.csv); omit to auto-detect from CBS",
+    )
+    args = ap.parse_args(argv)
 
     log("WARNING: HAR files and cookie files are login credentials. Do not commit them.")
     try:
@@ -335,6 +482,20 @@ def main() -> int:
 
     client = CBSClient(cookie)
     log(f"Host {HOST}")
+
+    # CBS's own idea of "this week" (from its live injury-report copy), not
+    # an NFL-calendar guess. Detected independently of --week so a manual
+    # backfill pull (an old or future week) never clobbers the app's sense
+    # of what week is actually current.
+    detected = detect_current_week(client)
+    if detected:
+        write_current_week(detected, source="cbs-tp")
+        log(f"CBS current week: {detected}")
+    else:
+        log("Could not read CBS's current week (no injury tooltips, or a network hiccup) — keeping the last known value.")
+    week = args.week if args.week is not None else (detected or read_current_week().get("week") or 1)
+    log(f"Box-score target: week {week}" + ("" if args.week is not None else " (auto-detected)"))
+
     log("Pulling 10 team pages (canonical rosters)...")
     try:
         roster = pull_rosters(client)
@@ -410,6 +571,39 @@ def main() -> int:
         log(f"  wrote {STATS_3G.name} ({len(g3)} rows)")
     except Exception as e:
         log(f"  3g stats skipped: {e}")
+
+    log(f"Pulling week-{week} NFL stats (box scores)...")
+    try:
+        week_rows = pull_week_stats(client, week)
+        dest = week_stats_csv(week)
+        write_pool_csv(dest, week_rows)
+        log(f"  wrote {dest.name} ({len(week_rows)} rows)")
+        write_cbs_pull_meta(week)
+    except Exception as e:
+        log(f"  week stats skipped: {e}")
+
+    # Re-pull the previous week too: CBS's "current week" (tp) flips to the
+    # new week Tue/Wed morning, and the background auto-refresh loop only
+    # ever asks for that current week — without this, a Monday-night final
+    # that lands after the last pre-flip pull is never captured, and the
+    # Report tab grades that game as pending forever.
+    if week > 1:
+        prev = week - 1
+        log(f"Re-pulling week-{prev} NFL stats too (in case Monday night finished after the last pull)...")
+        try:
+            prev_rows = pull_week_stats(client, prev)
+            write_pool_csv(week_stats_csv(prev), prev_rows)
+            log(f"  wrote {week_stats_csv(prev).name} ({len(prev_rows)} rows)")
+        except Exception as e:
+            log(f"  week-{prev} re-pull skipped: {e}")
+
+    log("Pulling standings (this league's total-points ranking = waiver order)...")
+    try:
+        standings = parse_standings(client.standings_page())
+        write_standings(standings)
+        log(f"  wrote {STANDINGS_JSON.name} ({len(standings)} teams)")
+    except Exception as e:
+        log(f"  standings skipped: {e}")
 
     log("Pulling CBS team depth charts (RB1 / WR2, not league-wide)...")
     depth = []

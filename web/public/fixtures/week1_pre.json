@@ -1,0 +1,2529 @@
+{
+  "week": 1,
+  "locked_at": "2026-09-24T19:09:02Z",
+  "team": "BUSSONE",
+  "mix": 0.5,
+  "mix_label": "50/50",
+  "objective": "mean",
+  "players": {
+    "blake corum": {
+      "player": "Blake Corum",
+      "pos": "RB",
+      "team": "LAR",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 1.0,
+        "p75": 3.0,
+        "p90": 5.0,
+        "mean": 1.61,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 1.17,
+          "carries": 16.28,
+          "pass_att": 0.0,
+          "receptions": 1.0,
+          "g3_targets": 1.0,
+          "g3_carries": 22.0
+        }
+      },
+      "espn_line": "1\u00a0tar \u00b7 1\u00a0rec \u00b7 7\u00a0rec yds \u00b7 0\u00a0rec TD \u00b7 11\u00a0car \u00b7 49\u00a0ru \u00b7 0.4\u00a0ru TD",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 48.6913,
+        "rec_yds": 6.9467,
+        "pass_td": 0.0,
+        "rush_td": 0.4358,
+        "rec_td": 0.0362,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 2,
+      "role_note": "LAR RB2"
+    },
+    "cairo santos": {
+      "player": "Cairo Santos",
+      "pos": "K",
+      "team": "CHI",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 1.5,
+        "p50": 3.5,
+        "p75": 5.0,
+        "p90": 7.5,
+        "mean": 3.74,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "1\u00a0FG \u00b7 2.2\u00a0XP",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.9516,
+        "xp": 2.2333,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "CHI K1"
+    },
+    "ceedee lamb": {
+      "player": "CeeDee Lamb",
+      "pos": "WR",
+      "team": "DAL",
+      "slot": "WR",
+      "proj": {
+        "p10": 0.0,
+        "p25": 1.0,
+        "p50": 3.0,
+        "p75": 6.0,
+        "p90": 9.0,
+        "mean": 3.82,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 13.14,
+          "carries": 0.57,
+          "pass_att": 0.0,
+          "receptions": 5.75,
+          "g3_targets": 17.0,
+          "g3_carries": 1.0
+        }
+      },
+      "espn_line": "9\u00a0tar \u00b7 6\u00a0rec \u00b7 81\u00a0rec yds \u00b7 0.5\u00a0rec TD \u00b7 1\u00a0ru",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.7457,
+        "rec_yds": 80.9862,
+        "pass_td": 0.0,
+        "rush_td": 0.0061,
+        "rec_td": 0.4897,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "DAL WR1"
+    },
+    "chris godwin": {
+      "player": "Chris Godwin",
+      "pos": "WR",
+      "team": "TB",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 1.0,
+        "p90": 3.0,
+        "mean": 0.93,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 6.25,
+          "carries": 2.0,
+          "pass_att": 0.0,
+          "receptions": 3.73,
+          "g3_targets": 7.0,
+          "g3_carries": 2.0
+        }
+      },
+      "espn_line": "5\u00a0tar \u00b7 4\u00a0rec \u00b7 43\u00a0rec yds \u00b7 0.3\u00a0rec TD",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 42.6993,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.2823,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 2,
+      "role_note": "TB WR2"
+    },
+    "dalton kincaid": {
+      "player": "Dalton Kincaid",
+      "pos": "TE",
+      "team": "BUF",
+      "slot": "TE",
+      "proj": {
+        "p10": 0.0,
+        "p25": 1.0,
+        "p50": 3.0,
+        "p75": 5.0,
+        "p90": 8.0,
+        "mean": 3.39,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 9.45,
+          "carries": 0.0,
+          "pass_att": 0.0,
+          "receptions": 3.34,
+          "g3_targets": 14.0,
+          "g3_carries": 0.0
+        }
+      },
+      "espn_line": "5\u00a0tar \u00b7 3\u00a0rec \u00b7 40\u00a0rec yds \u00b7 0.2\u00a0rec TD",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 39.632,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.2157,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "BUF TE1"
+    },
+    "ja'marr chase": {
+      "player": "Ja'Marr Chase",
+      "pos": "WR",
+      "team": "CIN",
+      "slot": "WR",
+      "proj": {
+        "p10": 0.0,
+        "p25": 1.0,
+        "p50": 4.0,
+        "p75": 6.0,
+        "p90": 9.0,
+        "mean": 4.04,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 11.57,
+          "carries": 0.12,
+          "pass_att": 0.0,
+          "receptions": 7.42,
+          "g3_targets": 13.0,
+          "g3_carries": 0.0
+        }
+      },
+      "espn_line": "10\u00a0tar \u00b7 7\u00a0rec \u00b7 89\u00a0rec yds \u00b7 0.7\u00a0rec TD \u00b7 1\u00a0ru",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 1.2216,
+        "rec_yds": 88.7961,
+        "pass_td": 0.0,
+        "rush_td": 0.0087,
+        "rec_td": 0.654,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "CIN WR1"
+    },
+    "jake elliott": {
+      "player": "Jake Elliott",
+      "pos": "K",
+      "team": "PHI",
+      "slot": "K",
+      "proj": {
+        "p10": 1.0,
+        "p25": 1.5,
+        "p50": 3.0,
+        "p75": 5.0,
+        "p90": 7.0,
+        "mean": 3.57,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "0.9\u00a0FG \u00b7 3\u00a0XP",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.893,
+        "xp": 2.9693,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "PHI K1"
+    },
+    "jeremiyah love": {
+      "player": "Jeremiyah Love",
+      "pos": "RB",
+      "team": "ARI",
+      "slot": "RB",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 1.0,
+        "p75": 3.0,
+        "p90": 6.0,
+        "mean": 2.16,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 5.89,
+          "carries": 16.44,
+          "pass_att": 0.0,
+          "receptions": 3.66,
+          "g3_targets": 7.0,
+          "g3_carries": 20.0
+        }
+      },
+      "espn_line": "5\u00a0tar \u00b7 4\u00a0rec \u00b7 27\u00a0rec yds \u00b7 0.1\u00a0rec TD \u00b7 13\u00a0car \u00b7 57\u00a0ru \u00b7 0.3\u00a0ru TD",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 57.3378,
+        "rec_yds": 26.953,
+        "pass_td": 0.0,
+        "rush_td": 0.3217,
+        "rec_td": 0.1202,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "ARI RB1"
+    },
+    "jordan love": {
+      "player": "Jordan Love",
+      "pos": "QB",
+      "team": "GB",
+      "slot": "QB",
+      "proj": {
+        "p10": 2.0,
+        "p25": 3.0,
+        "p50": 6.0,
+        "p75": 9.0,
+        "p90": 12.0,
+        "mean": 6.38,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 0.0,
+          "carries": 2.98,
+          "pass_att": 51.42,
+          "receptions": 0.0,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "234\u00a0pass \u00b7 12\u00a0ru \u00b7 1.4\u00a0pass TD \u00b7 0.1\u00a0ru TD",
+      "espn_sim": {
+        "pass_yds": 234.3765,
+        "rush_yds": 12.3098,
+        "rec_yds": 0.0,
+        "pass_td": 1.3699,
+        "rush_td": 0.0632,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "GB QB1"
+    },
+    "kenneth walker": {
+      "player": "Kenneth Walker III",
+      "pos": "RB",
+      "team": "KC",
+      "slot": "RB",
+      "proj": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 4.0,
+        "p75": 6.0,
+        "p90": 9.0,
+        "mean": 4.47,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 9.77,
+          "carries": 31.42,
+          "pass_att": 0.0,
+          "receptions": 2.29,
+          "g3_targets": 16.0,
+          "g3_carries": 47.0
+        }
+      },
+      "espn_line": "4\u00a0tar \u00b7 3\u00a0rec \u00b7 21\u00a0rec yds \u00b7 0.1\u00a0rec TD \u00b7 16\u00a0car \u00b7 67\u00a0ru \u00b7 0.4\u00a0ru TD",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 66.8603,
+        "rec_yds": 20.8012,
+        "pass_td": 0.0,
+        "rush_td": 0.4483,
+        "rec_td": 0.0887,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "KC RB1"
+    },
+    "ladd mcconkey": {
+      "player": "Ladd McConkey",
+      "pos": "WR",
+      "team": "LAC",
+      "slot": "WR",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 2.0,
+        "p75": 5.0,
+        "p90": 7.0,
+        "mean": 2.94,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 8.38,
+          "carries": 0.0,
+          "pass_att": 0.0,
+          "receptions": 4.86,
+          "g3_targets": 10.0,
+          "g3_carries": 0.0
+        }
+      },
+      "espn_line": "7\u00a0tar \u00b7 5\u00a0rec \u00b7 63\u00a0rec yds \u00b7 0.5\u00a0rec TD",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 62.5301,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.4887,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "LAC WR1"
+    },
+    "luther burden": {
+      "player": "Luther Burden III",
+      "pos": "WR",
+      "team": "CHI",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 2.0,
+        "p90": 4.0,
+        "mean": 1.35,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 9.34,
+          "carries": 0.77,
+          "pass_att": 0.0,
+          "receptions": 4.45,
+          "g3_targets": 12.0,
+          "g3_carries": 1.0
+        }
+      },
+      "espn_line": "7\u00a0tar \u00b7 4\u00a0rec \u00b7 55\u00a0rec yds \u00b7 0.3\u00a0rec TD \u00b7 1\u00a0car \u00b7 3\u00a0ru",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 2.9072,
+        "rec_yds": 55.1079,
+        "pass_td": 0.0,
+        "rush_td": 0.0223,
+        "rec_td": 0.2802,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 2,
+      "role_note": "CHI WR2"
+    },
+    "malik nabers": {
+      "player": "Malik Nabers",
+      "pos": "WR",
+      "team": "NYG",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 2.0,
+        "p90": 4.0,
+        "mean": 1.23,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 10.27,
+          "carries": 0.13,
+          "pass_att": 0.0,
+          "receptions": 6.03,
+          "g3_targets": 13.0,
+          "g3_carries": 0.0
+        }
+      },
+      "espn_line": "8\u00a0tar \u00b7 5\u00a0rec \u00b7 63\u00a0rec yds \u00b7 0.4\u00a0rec TD \u00b7 1\u00a0ru",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 1.3444,
+        "rec_yds": 62.9576,
+        "pass_td": 0.0,
+        "rush_td": 0.0093,
+        "rec_td": 0.4307,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": {
+        "designation": "Questionable",
+        "out": false,
+        "note": "Nabers (shoulder) was seen participating in Wednesday's practice, Pat Leonard of the New York Daily News reports. Expected return 2026-09-27."
+      },
+      "depth_rank": 1,
+      "role_note": "NYG WR1"
+    },
+    "ravens": {
+      "player": "Ravens",
+      "pos": "DST",
+      "team": "BAL",
+      "slot": "",
+      "proj": {
+        "p10": 0.74,
+        "p25": 1.27,
+        "p50": 2.25,
+        "p75": 3.86,
+        "p90": 5.29,
+        "mean": 2.72,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "21\u00a0PA \u00b7 0.7\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.6809,
+        "pa": 21.0733
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "BAL DST"
+    },
+    "seahawks": {
+      "player": "Seahawks",
+      "pos": "DST",
+      "team": "SEA",
+      "slot": "DST",
+      "proj": {
+        "p10": 1.37,
+        "p25": 2.34,
+        "p50": 4.13,
+        "p75": 5.82,
+        "p90": 8.07,
+        "mean": 4.36,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "19\u00a0PA \u00b7 0.7\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.731,
+        "pa": 18.8353
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "SEA DST"
+    },
+    "treveyon henderson": {
+      "player": "TreVeyon Henderson",
+      "pos": "RB",
+      "team": "NE",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 1.0,
+        "p75": 3.0,
+        "p90": 5.0,
+        "mean": 1.94,
+        "source": "3g+history",
+        "usage": {
+          "source": "3g+history",
+          "has_3g": true,
+          "targets": 0.0,
+          "carries": 16.0,
+          "pass_att": 0.0,
+          "receptions": 2.06,
+          "g3_targets": 0.0,
+          "g3_carries": 16.0
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 2,
+      "role_note": "NE RB2"
+    },
+    "trevor lawrence": {
+      "player": "Trevor Lawrence",
+      "pos": "QB",
+      "team": "JAC",
+      "slot": "",
+      "proj": {
+        "p10": 3.0,
+        "p25": 5.0,
+        "p50": 8.0,
+        "p75": 12.0,
+        "p90": 16.0,
+        "mean": 8.83,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 0.0,
+          "carries": 4.59,
+          "pass_att": 41.72,
+          "receptions": 0.0,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "226\u00a0pass \u00b7 20\u00a0ru \u00b7 1.5\u00a0pass TD \u00b7 0.3\u00a0ru TD",
+      "espn_sim": {
+        "pass_yds": 225.6736,
+        "rush_yds": 19.7471,
+        "rec_yds": 0.0,
+        "pass_td": 1.5055,
+        "rush_td": 0.2784,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "JAC QB1"
+    },
+    "tyler warren": {
+      "player": "Tyler Warren",
+      "pos": "TE",
+      "team": "IND",
+      "slot": "TE",
+      "proj": {
+        "p10": 0.0,
+        "p25": 1.0,
+        "p50": 2.0,
+        "p75": 5.0,
+        "p90": 7.0,
+        "mean": 3.16,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 9.46,
+          "carries": 0.68,
+          "pass_att": 0.0,
+          "receptions": 4.71,
+          "g3_targets": 12.0,
+          "g3_carries": 1.0
+        }
+      },
+      "espn_line": "7\u00a0tar \u00b7 5\u00a0rec \u00b7 52\u00a0rec yds \u00b7 0.3\u00a0rec TD \u00b7 1\u00a0ru",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.7726,
+        "rec_yds": 52.1629,
+        "pass_td": 0.0,
+        "rush_td": 0.0208,
+        "rec_td": 0.3139,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "IND TE1"
+    },
+    "woody marks": {
+      "player": "Woody Marks",
+      "pos": "RB",
+      "team": "HOU",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 2.0,
+        "p90": 4.0,
+        "mean": 1.27,
+        "source": "3g+history+espn",
+        "usage": {
+          "source": "3g+history+espn",
+          "has_3g": true,
+          "targets": 4.48,
+          "carries": 12.92,
+          "pass_att": 0.0,
+          "receptions": 1.47,
+          "g3_targets": 7.0,
+          "g3_carries": 17.0
+        }
+      },
+      "espn_line": "2\u00a0tar \u00b7 1\u00a0rec \u00b7 12\u00a0rec yds \u00b7 0.1\u00a0rec TD \u00b7 9\u00a0car \u00b7 37\u00a0ru \u00b7 0.2\u00a0ru TD",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 37.135,
+        "rec_yds": 12.3168,
+        "pass_td": 0.0,
+        "rush_td": 0.2231,
+        "rec_td": 0.0873,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 2,
+      "role_note": "HOU RB2"
+    },
+    "bears": {
+      "player": "Bears",
+      "pos": "DST",
+      "team": "CHI",
+      "slot": "",
+      "proj": {
+        "p10": 0.91,
+        "p25": 1.47,
+        "p50": 2.36,
+        "p75": 4.01,
+        "p90": 5.66,
+        "mean": 2.92,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "22\u00a0PA \u00b7 0.8\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.7843,
+        "pa": 21.5489
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "CHI DST"
+    },
+    "browns": {
+      "player": "Browns",
+      "pos": "DST",
+      "team": "CLE",
+      "slot": "",
+      "proj": {
+        "p10": 0.96,
+        "p25": 1.6,
+        "p50": 2.62,
+        "p75": 4.65,
+        "p90": 6.42,
+        "mean": 3.25,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "24\u00a0PA \u00b7 0.8\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.754,
+        "pa": 23.5113
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "CLE DST"
+    },
+    "buccaneers": {
+      "player": "Buccaneers",
+      "pos": "DST",
+      "team": "TB",
+      "slot": "",
+      "proj": {
+        "p10": 0.68,
+        "p25": 1.21,
+        "p50": 2.06,
+        "p75": 3.66,
+        "p90": 5.09,
+        "mean": 2.56,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "26\u00a0PA \u00b7 0.7\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.7037,
+        "pa": 25.73
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "TB DST"
+    },
+    "cardinals": {
+      "player": "Cardinals",
+      "pos": "DST",
+      "team": "ARI",
+      "slot": "",
+      "proj": {
+        "p10": 0.56,
+        "p25": 0.98,
+        "p50": 1.65,
+        "p75": 2.59,
+        "p90": 4.54,
+        "mean": 2.09,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "28\u00a0PA \u00b7 0.7\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.691,
+        "pa": 28.4624
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "ARI DST"
+    },
+    "chargers": {
+      "player": "Chargers",
+      "pos": "DST",
+      "team": "LAC",
+      "slot": "",
+      "proj": {
+        "p10": 1.24,
+        "p25": 1.98,
+        "p50": 3.38,
+        "p75": 4.78,
+        "p90": 5.85,
+        "mean": 3.47,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "17\u00a0PA \u00b7 0.7\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.6743,
+        "pa": 16.5965
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "LAC DST"
+    },
+    "colts": {
+      "player": "Colts",
+      "pos": "DST",
+      "team": "IND",
+      "slot": "",
+      "proj": {
+        "p10": 0.72,
+        "p25": 1.2,
+        "p50": 2.0,
+        "p75": 3.51,
+        "p90": 4.77,
+        "mean": 2.46,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "25\u00a0PA \u00b7 0.6\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.6115,
+        "pa": 24.6193
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "IND DST"
+    },
+    "commanders": {
+      "player": "Commanders",
+      "pos": "DST",
+      "team": "WAS",
+      "slot": "",
+      "proj": {
+        "p10": 0.63,
+        "p25": 1.1,
+        "p50": 1.77,
+        "p75": 2.84,
+        "p90": 4.93,
+        "mean": 2.27,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "28\u00a0PA \u00b7 0.5\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.546,
+        "pa": 27.8025
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "WAS DST"
+    },
+    "cowboys": {
+      "player": "Cowboys",
+      "pos": "DST",
+      "team": "DAL",
+      "slot": "",
+      "proj": {
+        "p10": 0.53,
+        "p25": 0.98,
+        "p50": 1.72,
+        "p75": 2.78,
+        "p90": 4.62,
+        "mean": 2.18,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "22\u00a0PA \u00b7 0.6\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.6236,
+        "pa": 22.4359
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "DAL DST"
+    },
+    "dolphins": {
+      "player": "Dolphins",
+      "pos": "DST",
+      "team": "MIA",
+      "slot": "",
+      "proj": {
+        "p10": 0.72,
+        "p25": 1.27,
+        "p50": 2.1,
+        "p75": 3.49,
+        "p90": 4.8,
+        "mean": 2.48,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "23\u00a0PA \u00b7 0.7\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.7339,
+        "pa": 23.215
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "MIA DST"
+    },
+    "giants": {
+      "player": "Giants",
+      "pos": "DST",
+      "team": "NYG",
+      "slot": "",
+      "proj": {
+        "p10": 0.68,
+        "p25": 1.17,
+        "p50": 1.9,
+        "p75": 3.3,
+        "p90": 4.98,
+        "mean": 2.44,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "26\u00a0PA \u00b7 0.7\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.7271,
+        "pa": 25.7833
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "NYG DST"
+    },
+    "jets": {
+      "player": "Jets",
+      "pos": "DST",
+      "team": "NYJ",
+      "slot": "",
+      "proj": {
+        "p10": 0.5,
+        "p25": 1.03,
+        "p50": 1.88,
+        "p75": 3.56,
+        "p90": 5.32,
+        "mean": 2.48,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "19\u00a0PA \u00b7 0.6\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.5987,
+        "pa": 18.783
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "NYJ DST"
+    },
+    "raiders": {
+      "player": "Raiders",
+      "pos": "DST",
+      "team": "LV",
+      "slot": "",
+      "proj": {
+        "p10": 0.73,
+        "p25": 1.4,
+        "p50": 2.47,
+        "p75": 3.99,
+        "p90": 5.02,
+        "mean": 2.77,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "17\u00a0PA \u00b7 0.6\u00a0sacks",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.5609,
+        "pa": 17.1702
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "LV DST"
+    },
+    "anders carlson": {
+      "player": "Anders Carlson",
+      "pos": "K",
+      "team": "NYJ",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 4.0,
+        "p75": 6.5,
+        "p90": 8.5,
+        "mean": 4.46,
+        "source": "role-prior",
+        "usage": {
+          "source": "role-prior",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "andre szmyt": {
+      "player": "Andre Szmyt",
+      "pos": "K",
+      "team": "CLE",
+      "slot": "",
+      "proj": {
+        "p10": 0.5,
+        "p25": 1.0,
+        "p50": 2.5,
+        "p75": 4.5,
+        "p90": 6.5,
+        "mean": 3.16,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "0.9\u00a0FG \u00b7 1.4\u00a0XP",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.8877,
+        "xp": 1.4449,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "CLE K1"
+    },
+    "austin seibert": {
+      "player": "Austin Seibert",
+      "pos": "K",
+      "team": "WAS",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 4.0,
+        "p75": 6.5,
+        "p90": 9.0,
+        "mean": 4.54,
+        "source": "role-prior",
+        "usage": {
+          "source": "role-prior",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "ben sauls": {
+      "player": "Ben Sauls",
+      "pos": "K",
+      "team": "NYG",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.5,
+        "p75": 2.0,
+        "p90": 3.5,
+        "mean": 1.3,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "blake grupe": {
+      "player": "Blake Grupe",
+      "pos": "K",
+      "team": "NYJ",
+      "slot": "",
+      "proj": {
+        "p10": 0.5,
+        "p25": 1.5,
+        "p50": 3.5,
+        "p75": 5.0,
+        "p90": 7.5,
+        "mean": 3.65,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "0.9\u00a0FG \u00b7 1.6\u00a0XP",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.8578,
+        "xp": 1.642,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 2,
+      "role_note": "NYJ K2"
+    },
+    "brandon mcmanus": {
+      "player": "Brandon McManus",
+      "pos": "K",
+      "team": "GB",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 1.5,
+        "p50": 3.5,
+        "p75": 5.0,
+        "p90": 7.5,
+        "mean": 3.74,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "cade york": {
+      "player": "Cade York",
+      "pos": "K",
+      "team": "NYJ",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 4.0,
+        "p75": 6.0,
+        "p90": 8.5,
+        "mean": 4.39,
+        "source": "role-prior",
+        "usage": {
+          "source": "role-prior",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "cameron dicker": {
+      "player": "Cameron Dicker",
+      "pos": "K",
+      "team": "LAC",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 4.5,
+        "p75": 6.5,
+        "p90": 9.0,
+        "mean": 4.78,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "1.1\u00a0FG \u00b7 3.1\u00a0XP",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 1.0953,
+        "xp": 3.0762,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "LAC K1"
+    },
+    "chad ryland": {
+      "player": "Chad Ryland",
+      "pos": "K",
+      "team": "ARI",
+      "slot": "",
+      "proj": {
+        "p10": 0.5,
+        "p25": 1.5,
+        "p50": 3.0,
+        "p75": 5.0,
+        "p90": 7.0,
+        "mean": 3.49,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "0.9\u00a0FG \u00b7 1.5\u00a0XP",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.892,
+        "xp": 1.4822,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "ARI K1"
+    },
+    "charlie smyth": {
+      "player": "Charlie Smyth",
+      "pos": "K",
+      "team": "NO",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.5,
+        "p50": 1.5,
+        "p75": 3.0,
+        "p90": 5.0,
+        "mean": 1.99,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "dustin hopkins": {
+      "player": "Dustin Hopkins",
+      "pos": "K",
+      "team": "CLE",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 4.0,
+        "p75": 6.0,
+        "p90": 8.5,
+        "mean": 4.44,
+        "source": "role-prior",
+        "usage": {
+          "source": "role-prior",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "graham gano": {
+      "player": "Graham Gano",
+      "pos": "K",
+      "team": "NYG",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.5,
+        "p75": 2.0,
+        "p90": 3.5,
+        "mean": 1.4,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "greg joseph": {
+      "player": "Greg Joseph",
+      "pos": "K",
+      "team": "LV",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 4.0,
+        "p75": 6.5,
+        "p90": 9.0,
+        "mean": 4.5,
+        "source": "role-prior",
+        "usage": {
+          "source": "role-prior",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "greg zuerlein": {
+      "player": "Greg Zuerlein",
+      "pos": "K",
+      "team": "NYJ",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 4.0,
+        "p75": 6.5,
+        "p90": 8.5,
+        "mean": 4.56,
+        "source": "role-prior",
+        "usage": {
+          "source": "role-prior",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "jake moody": {
+      "player": "Jake Moody",
+      "pos": "K",
+      "team": "BAL",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.5,
+        "p50": 2.5,
+        "p75": 4.0,
+        "p90": 6.0,
+        "mean": 2.75,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "jason sanders": {
+      "player": "Jason Sanders",
+      "pos": "K",
+      "team": "NYJ",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 4.0,
+        "p75": 6.5,
+        "p90": 8.5,
+        "mean": 4.6,
+        "source": "role-prior",
+        "usage": {
+          "source": "role-prior",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "NYJ K1"
+    },
+    "joey slye": {
+      "player": "Joey Slye",
+      "pos": "K",
+      "team": "TEN",
+      "slot": "",
+      "proj": {
+        "p10": 0.5,
+        "p25": 1.5,
+        "p50": 3.0,
+        "p75": 5.0,
+        "p90": 7.5,
+        "mean": 3.59,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "0.9\u00a0FG \u00b7 1.9\u00a0XP",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.8979,
+        "xp": 1.9251,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "TEN K1"
+    },
+    "john parker romo": {
+      "player": "John Parker Romo",
+      "pos": "K",
+      "team": "ATL",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.5,
+        "p50": 1.0,
+        "p75": 3.0,
+        "p90": 4.0,
+        "mean": 1.74,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": null,
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "joshua karty": {
+      "player": "Joshua Karty",
+      "pos": "K",
+      "team": "ARI",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.5,
+        "p50": 1.0,
+        "p75": 3.0,
+        "p90": 4.5,
+        "mean": 1.94,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "jude mcatamney": {
+      "player": "Jude McAtamney",
+      "pos": "K",
+      "team": "NYG",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.5,
+        "p75": 1.0,
+        "p90": 1.5,
+        "mean": 0.6,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "justin tucker": {
+      "player": "Justin Tucker",
+      "pos": "K",
+      "team": "BAL",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 4.0,
+        "p75": 6.0,
+        "p90": 8.5,
+        "mean": 4.48,
+        "source": "role-prior",
+        "usage": {
+          "source": "role-prior",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "lucas havrisik": {
+      "player": "Lucas Havrisik",
+      "pos": "K",
+      "team": "GB",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.5,
+        "p75": 1.0,
+        "p90": 2.5,
+        "mean": 0.79,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "matt gay": {
+      "player": "Matt Gay",
+      "pos": "K",
+      "team": "LV",
+      "slot": "",
+      "proj": {
+        "p10": 0.5,
+        "p25": 1.0,
+        "p50": 2.5,
+        "p75": 4.5,
+        "p90": 6.0,
+        "mean": 2.97,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "0.9\u00a0FG \u00b7 2.2\u00a0XP",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.9415,
+        "xp": 2.2411,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "LV K1"
+    },
+    "matt prater": {
+      "player": "Matt Prater",
+      "pos": "K",
+      "team": "BUF",
+      "slot": "",
+      "proj": {
+        "p10": 1.0,
+        "p25": 1.5,
+        "p50": 3.0,
+        "p75": 5.0,
+        "p90": 6.5,
+        "mean": 3.56,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "matthew wright": {
+      "player": "Matthew Wright",
+      "pos": "K",
+      "team": "BUF",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.5,
+        "p75": 1.0,
+        "p90": 3.0,
+        "mean": 0.84,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.0,
+        "xp": 0.0,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "mike badgley": {
+      "player": "Mike Badgley",
+      "pos": "K",
+      "team": "BUF",
+      "slot": "",
+      "proj": {
+        "p10": 0.0,
+        "p25": 0.5,
+        "p50": 1.5,
+        "p75": 3.5,
+        "p90": 4.5,
+        "mean": 1.95,
+        "source": "season history",
+        "usage": {
+          "source": "season history",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "",
+      "espn_sim": null,
+      "injury": null,
+      "depth_rank": null,
+      "role_note": ""
+    },
+    "nick folk": {
+      "player": "Nick Folk",
+      "pos": "K",
+      "team": "ATL",
+      "slot": "",
+      "proj": {
+        "p10": 0.5,
+        "p25": 1.0,
+        "p50": 3.0,
+        "p75": 5.0,
+        "p90": 7.0,
+        "mean": 3.4,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "1\u00a0FG \u00b7 1.4\u00a0XP",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.9675,
+        "xp": 1.3799,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "ATL K1"
+    },
+    "riley patterson": {
+      "player": "Riley Patterson",
+      "pos": "K",
+      "team": "MIA",
+      "slot": "",
+      "proj": {
+        "p10": 0.5,
+        "p25": 1.5,
+        "p50": 3.5,
+        "p75": 5.0,
+        "p90": 7.0,
+        "mean": 3.6,
+        "source": "espn",
+        "usage": {
+          "source": "espn week stats",
+          "has_3g": false,
+          "targets": null,
+          "carries": null,
+          "pass_att": null,
+          "receptions": null,
+          "g3_targets": null,
+          "g3_carries": null
+        }
+      },
+      "espn_line": "0.9\u00a0FG \u00b7 1.6\u00a0XP",
+      "espn_sim": {
+        "pass_yds": 0.0,
+        "rush_yds": 0.0,
+        "rec_yds": 0.0,
+        "pass_td": 0.0,
+        "rush_td": 0.0,
+        "rec_td": 0.0,
+        "fg": 0.9407,
+        "xp": 1.6159,
+        "sacks": 0.0,
+        "pa": 0.0
+      },
+      "injury": null,
+      "depth_rank": 1,
+      "role_note": "MIA K1"
+    }
+  },
+  "lineup_p50": {
+    "starters": [
+      {
+        "player": "Trevor Lawrence",
+        "pos": "QB",
+        "slot": "QB"
+      },
+      {
+        "player": "Kenneth Walker III",
+        "pos": "RB",
+        "slot": "RB"
+      },
+      {
+        "player": "Ja'Marr Chase",
+        "pos": "WR",
+        "slot": "WR"
+      },
+      {
+        "player": "Dalton Kincaid",
+        "pos": "TE",
+        "slot": "TE"
+      },
+      {
+        "player": "CeeDee Lamb",
+        "pos": "WR",
+        "slot": "FLEX"
+      },
+      {
+        "player": "Ladd McConkey",
+        "pos": "WR",
+        "slot": "FLEX"
+      },
+      {
+        "player": "Tyler Warren",
+        "pos": "TE",
+        "slot": "FLEX"
+      },
+      {
+        "player": "Jeremiyah Love",
+        "pos": "RB",
+        "slot": "FLEX"
+      },
+      {
+        "player": "Cairo Santos",
+        "pos": "K",
+        "slot": "K"
+      },
+      {
+        "player": "Seahawks",
+        "pos": "DST",
+        "slot": "DST"
+      }
+    ],
+    "bench": [
+      {
+        "player": "Jordan Love",
+        "pos": "QB",
+        "slot": "QB"
+      },
+      {
+        "player": "TreVeyon Henderson",
+        "pos": "RB",
+        "slot": ""
+      },
+      {
+        "player": "Blake Corum",
+        "pos": "RB",
+        "slot": ""
+      },
+      {
+        "player": "Woody Marks",
+        "pos": "RB",
+        "slot": ""
+      },
+      {
+        "player": "Luther Burden III",
+        "pos": "WR",
+        "slot": ""
+      },
+      {
+        "player": "Malik Nabers",
+        "pos": "WR",
+        "slot": ""
+      },
+      {
+        "player": "Chris Godwin",
+        "pos": "WR",
+        "slot": ""
+      },
+      {
+        "player": "Jake Elliott",
+        "pos": "K",
+        "slot": "K"
+      },
+      {
+        "player": "Ravens",
+        "pos": "DST",
+        "slot": ""
+      }
+    ],
+    "why": [
+      {
+        "player": "Trevor Lawrence vs Jordan Love",
+        "text": "QB call: only one active QB slot. Recheck matchup/Vegas each week, not just this sim.",
+        "kind": "close"
+      },
+      {
+        "player": "Dalton Kincaid vs Tyler Warren",
+        "text": "Close TE call: YPC/spike profile vs target volume. Volume does not score here. Active max 2 TE.",
+        "kind": "close"
+      },
+      {
+        "player": "Jeremiyah Love vs TreVeyon Henderson",
+        "text": "Close skill call at this percentile. Active max 4 RB / 4 WR \u2014 a 5th RB cannot start.",
+        "kind": "close"
+      }
+    ]
+  }
+}

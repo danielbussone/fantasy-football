@@ -13,3 +13,7 @@ web/dist/
 .venv/
 .pytest_cache/
 .cursor/
+snapshots/
+*.log
+nflverse_cache/
+nflverse_meta.json

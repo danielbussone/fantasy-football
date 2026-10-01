@@ -1,0 +1,75 @@
+{
+  "as_of": "2026-10-01T15:40:09Z",
+  "teams": [
+    {
+      "rank": 1,
+      "team": "BUSSONE",
+      "offensive": 88.0,
+      "defensive": 12.5,
+      "total": 100.5
+    },
+    {
+      "rank": 2,
+      "team": "THROBBER",
+      "offensive": 80.0,
+      "defensive": 11.0,
+      "total": 91.0
+    },
+    {
+      "rank": 3,
+      "team": "FORBES",
+      "offensive": 80.0,
+      "defensive": 10.0,
+      "total": 90.0
+    },
+    {
+      "rank": 4,
+      "team": "BOLDING",
+      "offensive": 65.5,
+      "defensive": 14.5,
+      "total": 80.0
+    },
+    {
+      "rank": 5,
+      "team": "BAUKOL",
+      "offensive": 68.5,
+      "defensive": 10.5,
+      "total": 79.0
+    },
+    {
+      "rank": 5,
+      "team": "CHEN",
+      "offensive": 70.0,
+      "defensive": 9.0,
+      "total": 79.0
+    },
+    {
+      "rank": 7,
+      "team": "FREEMANS",
+      "offensive": 69.0,
+      "defensive": 9.5,
+      "total": 78.5
+    },
+    {
+      "rank": 8,
+      "team": "PRESTON",
+      "offensive": 71.5,
+      "defensive": 4.5,
+      "total": 76.0
+    },
+    {
+      "rank": 9,
+      "team": "MUCK/UZES",
+      "offensive": 69.5,
+      "defensive": 4.5,
+      "total": 74.0
+    },
+    {
+      "rank": 10,
+      "team": "ANN",
+      "offensive": 56.0,
+      "defensive": 15.0,
+      "total": 71.0
+    }
+  ]
+}
